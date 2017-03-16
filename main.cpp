@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "PSUMAA" << std::endl;
+    std::cout << "PSUMAA-JP" << std::endl;
     return 0;
 }
