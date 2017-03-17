@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/Tarefa.cpp.o"
   "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

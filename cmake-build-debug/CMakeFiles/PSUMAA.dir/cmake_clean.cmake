@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PSUMAA.dir/main.cpp.o"
+  "CMakeFiles/PSUMAA.dir/Tarefa.cpp.o"
   "PSUMAA.pdb"
   "PSUMAA"
 )

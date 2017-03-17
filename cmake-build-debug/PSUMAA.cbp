@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp">
+			<Option target="PSUMAA"/>
+		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h">
+			<Option target="PSUMAA"/>
+		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>

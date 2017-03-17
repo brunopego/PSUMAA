@@ -123,6 +123,33 @@ PSUMAA/fast:
 	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/build
 .PHONY : PSUMAA/fast
 
+Tarefa.o: Tarefa.cpp.o
+
+.PHONY : Tarefa.o
+
+# target to build an object file
+Tarefa.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Tarefa.cpp.o
+.PHONY : Tarefa.cpp.o
+
+Tarefa.i: Tarefa.cpp.i
+
+.PHONY : Tarefa.i
+
+# target to preprocess a source file
+Tarefa.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Tarefa.cpp.i
+.PHONY : Tarefa.cpp.i
+
+Tarefa.s: Tarefa.cpp.s
+
+.PHONY : Tarefa.s
+
+# target to generate assembly for a file
+Tarefa.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Tarefa.cpp.s
+.PHONY : Tarefa.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PSUMAA"
+	@echo "... Tarefa.o"
+	@echo "... Tarefa.i"
+	@echo "... Tarefa.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

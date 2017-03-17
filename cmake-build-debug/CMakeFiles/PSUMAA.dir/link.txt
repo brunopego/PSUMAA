@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/PSUMAA.dir/main.cpp.o  -o PSUMAA 
+/usr/bin/c++   -g   CMakeFiles/PSUMAA.dir/main.cpp.o CMakeFiles/PSUMAA.dir/Tarefa.cpp.o  -o PSUMAA 
