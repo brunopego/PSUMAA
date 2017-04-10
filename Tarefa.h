@@ -12,11 +12,13 @@ private:
     int t; // t -> tardiness, data final da janela
     int alfa; // custo de antecipacao
     int beta; // custo de atraso
+    int inicio;
+    int fim;
 
 public:
 
     // Construtor da classe
-    Tarefa(int id, int tp, int e, int t, int alfa, int beta);
+    Tarefa(int id, int tp, int e, int t, int alfa, int beta, int inicio = 0);
 
     int getId() const;
 
@@ -41,6 +43,18 @@ public:
     int getBeta() const;
 
     void setBeta(int beta);
+
+    int getInicio() const;
+
+    void setInicio(int inicio);
+
+    int getFim() const;
+
+    void setFim(int fim);
+
+    int getAntecipacao() const;
+
+    int getAtraso() const;
 
 };
 

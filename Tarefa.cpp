@@ -1,12 +1,14 @@
 #include "Tarefa.h"
 
-Tarefa::Tarefa(int id, int tp, int e, int t, int alfa, int beta){
+Tarefa::Tarefa(int id, int tp, int e, int t, int alfa, int beta, int inicio = 0){
     this->id = id;
     this->tp = tp;
     this->e = e;
     this->t = t;
     this->alfa = alfa;
     this->beta = beta;
+    this->inicio = inicio;
+    this->fim = this->inicio + this->tp;
 }
 
 int Tarefa::getId() const {
@@ -56,3 +58,30 @@ int Tarefa::getBeta() const {
 void Tarefa::setBeta(int beta) {
     Tarefa::beta = beta;
 }
+
+int Tarefa::getInicio() const {
+    return inicio;
+}
+
+void Tarefa::setInicio(int inicio) {
+    Tarefa::inicio = inicio;
+}
+
+int Tarefa::getFim() const {
+    return this->inicio + this->tp;
+}
+
+void Tarefa::setFim(int fim) {
+    Tarefa::fim = fim;
+}
+
+int Tarefa::getAntecipacao() const {
+    if(this->fim < this->e) return (this->e) - (this->fim);
+    return 0;
+}
+
+int Tarefa::getAtraso() const {
+    if(this->fim > this->t) return (this->fim) - (this->t);
+    return 0;
+}
+
