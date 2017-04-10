@@ -19,11 +19,9 @@ public:
 
     Problema();
 
-    void ler_arquivo();
-
     const vector<Tarefa> &getTarefas() const;
 
-    void setTarefas(const vector<Tarefa> &tarefas);
+    void addTarefa(const Tarefa &tarefas);
 
     const string &getNome_arq() const;
 

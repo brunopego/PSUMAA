@@ -1,6 +1,8 @@
 #ifndef PSUMAA_TAREFA_H
 #define PSUMAA_TAREFA_H
 
+#include <iostream>
+using namespace std;
 
 class Tarefa {
 
@@ -18,7 +20,8 @@ private:
 public:
 
     // Construtor da classe
-    Tarefa(int id, int tp, int e, int t, int alfa, int beta, int inicio = 0);
+    Tarefa();
+    Tarefa(int id, int tp, int e, int t, int alfa, int beta);
 
     int getId() const;
 

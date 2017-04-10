@@ -9,6 +9,7 @@ private:
 
 public:
 
+    TempoSetup();
     TempoSetup(const int& t);
     ~TempoSetup();
     void setTempoSetup(const int& x, const int& y, const int& valor);

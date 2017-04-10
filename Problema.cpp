@@ -11,8 +11,8 @@ const vector<Tarefa> &Problema::getTarefas() const {
     return tarefas;
 }
 
-void Problema::setTarefas(const vector<Tarefa> &tarefas) {
-    Problema::tarefas = tarefas;
+void Problema::addTarefa(const Tarefa &tarefa) {
+    Problema::tarefas.push_back(tarefa);
 }
 
 const string &Problema::getNome_arq() const {

@@ -4,6 +4,9 @@
 
 using namespace std;
 
+
+TempoSetup::TempoSetup() {}
+
 TempoSetup::TempoSetup(const int &t) : tam(t) {
     try {
         this->matriz_ts = new int*[this->tam];

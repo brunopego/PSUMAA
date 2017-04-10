@@ -1,13 +1,17 @@
 #include "Tarefa.h"
+#include <iostream>
+using namespace std;
 
-Tarefa::Tarefa(int id, int tp, int e, int t, int alfa, int beta, int inicio = 0){
+Tarefa::Tarefa() {}
+
+Tarefa::Tarefa(int id, int tp, int e, int t, int alfa, int beta){
     this->id = id;
     this->tp = tp;
     this->e = e;
     this->t = t;
     this->alfa = alfa;
     this->beta = beta;
-    this->inicio = inicio;
+    this->inicio = 0;
     this->fim = this->inicio + this->tp;
 }
 
