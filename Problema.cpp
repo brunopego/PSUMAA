@@ -60,7 +60,7 @@ Problema::~Problema() {
     delete[] Problema::matriz_ts;
 }
 
-vector<Tarefa> Problema::getTarefas() const {
+vector<Tarefa> &Problema::getTarefas() {
     return tarefas;
 }
 
