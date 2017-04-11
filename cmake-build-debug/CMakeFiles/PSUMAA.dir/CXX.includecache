@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp
+Job.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
@@ -27,6 +33,22 @@ string
 -
 Tarefa.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.cpp
+Solucao.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+Tarefa.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+Problema.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+Job.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+Problema.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+vector
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
 Tarefa.h
@@ -51,4 +73,6 @@ Tarefa.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+Solucao.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 

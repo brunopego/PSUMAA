@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp">
+			<Option target="PSUMAA"/>
+		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h">
+			<Option target="PSUMAA"/>
+		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h">
+			<Option target="PSUMAA"/>
+		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.cpp">
+			<Option target="PSUMAA"/>
+		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h">
 			<Option target="PSUMAA"/>
 		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp">

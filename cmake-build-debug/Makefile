@@ -123,6 +123,33 @@ PSUMAA/fast:
 	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/build
 .PHONY : PSUMAA/fast
 
+Job.o: Job.cpp.o
+
+.PHONY : Job.o
+
+# target to build an object file
+Job.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Job.cpp.o
+.PHONY : Job.cpp.o
+
+Job.i: Job.cpp.i
+
+.PHONY : Job.i
+
+# target to preprocess a source file
+Job.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Job.cpp.i
+.PHONY : Job.cpp.i
+
+Job.s: Job.cpp.s
+
+.PHONY : Job.s
+
+# target to generate assembly for a file
+Job.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Job.cpp.s
+.PHONY : Job.cpp.s
+
 Problema.o: Problema.cpp.o
 
 .PHONY : Problema.o
@@ -149,6 +176,33 @@ Problema.s: Problema.cpp.s
 Problema.cpp.s:
 	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Problema.cpp.s
 .PHONY : Problema.cpp.s
+
+Solucao.o: Solucao.cpp.o
+
+.PHONY : Solucao.o
+
+# target to build an object file
+Solucao.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Solucao.cpp.o
+.PHONY : Solucao.cpp.o
+
+Solucao.i: Solucao.cpp.i
+
+.PHONY : Solucao.i
+
+# target to preprocess a source file
+Solucao.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Solucao.cpp.i
+.PHONY : Solucao.cpp.i
+
+Solucao.s: Solucao.cpp.s
+
+.PHONY : Solucao.s
+
+# target to generate assembly for a file
+Solucao.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Solucao.cpp.s
+.PHONY : Solucao.cpp.s
 
 Tarefa.o: Tarefa.cpp.o
 
@@ -213,9 +267,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PSUMAA"
+	@echo "... Job.o"
+	@echo "... Job.i"
+	@echo "... Job.s"
 	@echo "... Problema.o"
 	@echo "... Problema.i"
 	@echo "... Problema.s"
+	@echo "... Solucao.o"
+	@echo "... Solucao.i"
+	@echo "... Solucao.s"
 	@echo "... Tarefa.o"
 	@echo "... Tarefa.i"
 	@echo "... Tarefa.s"

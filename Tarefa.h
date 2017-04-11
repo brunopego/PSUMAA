@@ -21,6 +21,7 @@ public:
 
     // Construtor da classe
     Tarefa();
+
     Tarefa(int id, int tp, int e, int t, int alfa, int beta);
 
     int getId() const;

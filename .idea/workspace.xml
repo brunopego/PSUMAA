@@ -11,17 +11,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1ba45cb-7ba6-47b5-af5b-66b06fa84bdd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TempoSetup.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TempoSetup.h" afterPath="" />
+    <list default="true" id="a1ba45cb-7ba6-47b5-af5b-66b06fa84bdd" name="Default" comment="Cria classe Solucao e">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Job.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Job.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Solucao.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Solucao.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/Tarefa.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/Tarefa.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/build.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/PSUMAA" afterPath="$PROJECT_DIR$/cmake-build-debug/PSUMAA" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problema.cpp" afterPath="$PROJECT_DIR$/Problema.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problema.h" afterPath="$PROJECT_DIR$/Problema.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tarefa.cpp" afterPath="$PROJECT_DIR$/Tarefa.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tarefa.h" afterPath="$PROJECT_DIR$/Tarefa.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/DependInfo.cmake" />
@@ -49,11 +50,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="81">
+              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -61,22 +62,68 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Solucao.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Solucao.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solucao.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Solucao.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              <folding>
+                <element signature="e#52#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Job.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Job.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Job.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Job.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Problema.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Problema.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="18" />
               <folding>
+                <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#122#1356#0" expanded="false" />
                 <element signature="e#1358#1514#0" expanded="false" />
-                <element signature="e#1516#1583#0" expanded="false" />
-                <element signature="e#1585#1676#0" expanded="false" />
-                <element signature="e#1678#1746#0" expanded="false" />
-                <element signature="e#1748#1837#0" expanded="false" />
-                <element signature="e#1839#1903#0" expanded="false" />
-                <element signature="e#1905#1996#0" expanded="false" />
-                <element signature="e#2221#2334#0" expanded="false" />
-                <element signature="e#2336#2433#0" expanded="false" />
+                <element signature="e#1516#1578#0" expanded="false" />
+                <element signature="e#1580#1671#0" expanded="false" />
+                <element signature="e#1673#1741#0" expanded="false" />
+                <element signature="e#1743#1832#0" expanded="false" />
+                <element signature="e#1834#1898#0" expanded="false" />
+                <element signature="e#1900#1991#0" expanded="false" />
+                <element signature="e#1993#2218#0" expanded="false" />
+                <element signature="e#2220#2333#0" expanded="false" />
+                <element signature="e#2335#2432#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -85,8 +132,8 @@
       <file leaf-file-name="Problema.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Problema.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="408">
+              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="e#51#70#0" expanded="true" />
               </folding>
@@ -97,9 +144,10 @@
       <file leaf-file-name="Tarefa.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tarefa.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
               <folding>
+                <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#333#377#0" expanded="false" />
                 <element signature="e#379#430#0" expanded="false" />
                 <element signature="e#432#476#0" expanded="false" />
@@ -113,7 +161,7 @@
                 <element signature="e#828#876#0" expanded="false" />
                 <element signature="e#878#937#0" expanded="false" />
                 <element signature="e#939#991#0" expanded="false" />
-                <element signature="e#1130#1185#0" expanded="false" />
+                <element signature="e#1171#1226#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,8 +170,8 @@
       <file leaf-file-name="Tarefa.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tarefa.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="-633">
+              <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -146,10 +194,14 @@
         <option value="$PROJECT_DIR$/Arquivo.h" />
         <option value="$PROJECT_DIR$/TempoSetup.cpp" />
         <option value="$PROJECT_DIR$/TempoSetup.h" />
-        <option value="$PROJECT_DIR$/Tarefa.h" />
         <option value="$PROJECT_DIR$/Problema.h" />
         <option value="$PROJECT_DIR$/Problema.cpp" />
         <option value="$PROJECT_DIR$/Tarefa.cpp" />
+        <option value="$PROJECT_DIR$/Job.h" />
+        <option value="$PROJECT_DIR$/Job.cpp" />
+        <option value="$PROJECT_DIR$/Solucao.h" />
+        <option value="$PROJECT_DIR$/Tarefa.h" />
+        <option value="$PROJECT_DIR$/Solucao.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -401,7 +453,8 @@
       <workItem from="1489765501973" duration="692000" />
       <workItem from="1489788981401" duration="1250000" />
       <workItem from="1490364027699" duration="111000" />
-      <workItem from="1491780501865" duration="30983000" />
+      <workItem from="1491780501865" duration="34684000" />
+      <workItem from="1491918184357" duration="7927000" />
     </task>
     <task id="LOCAL-00001" summary="Inicia Projeto">
       <created>1489639245577</created>
@@ -431,11 +484,39 @@
       <option name="project" value="LOCAL" />
       <updated>1491849172002</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Faz junção das Classes Problema e TempoSetup">
+      <created>1491871055168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491871055168</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Atualiza função getTarefa() - Classe Problema">
+      <created>1491872210564</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491872210564</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Atualiza função getTarefa() - Classe Problema">
+      <created>1491872354895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491872354895</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Conserta o calculo do custo do Problema">
+      <created>1491873311806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491873311806</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37257000" />
+    <option name="totallyTimeSpent" value="48885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,9 +536,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.50558454" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.4944155" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3279483" sideWeight="0.4944155" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -467,6 +547,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -481,47 +562,123 @@
     <MESSAGE value="Acrescenta classe Tarefa" />
     <MESSAGE value="Muda classe Arquivo para classe Problema&#10;Altera classe Tarefa&#10;Altera classe Problema&#10;Cria classe TempoSetup" />
     <MESSAGE value="Acrescenta funções&#10;Leitura do arquivo e construção da matriz." />
-    <option name="LAST_COMMIT_MESSAGE" value="Acrescenta funções&#10;Leitura do arquivo e construção da matriz." />
+    <MESSAGE value="Faz junção das Classes Problema e TempoSetup" />
+    <MESSAGE value="Atualiza função getTarefa() - Classe Problema" />
+    <MESSAGE value="Conserta o calculo do custo do Problema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conserta o calculo do custo do Problema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Problema.cpp</url>
-          <line>89</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/Solucao.cpp</url>
+          <line>46</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>19</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Tarefa.cpp</url>
-          <line>70</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>20</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>21</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>22</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/Solucao.cpp</url>
+          <line>44</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solucao.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solucao.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#52#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problema.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#122#1356#0" expanded="false" />
+            <element signature="e#1358#1514#0" expanded="false" />
+            <element signature="e#1516#1578#0" expanded="false" />
+            <element signature="e#1580#1671#0" expanded="false" />
+            <element signature="e#1673#1741#0" expanded="false" />
+            <element signature="e#1743#1832#0" expanded="false" />
+            <element signature="e#1834#1898#0" expanded="false" />
+            <element signature="e#1900#1991#0" expanded="false" />
+            <element signature="e#1993#2218#0" expanded="false" />
+            <element signature="e#2220#2333#0" expanded="false" />
+            <element signature="e#2335#2432#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problema.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tarefa.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#333#377#0" expanded="false" />
+            <element signature="e#379#430#0" expanded="false" />
+            <element signature="e#432#476#0" expanded="false" />
+            <element signature="e#478#529#0" expanded="false" />
+            <element signature="e#531#573#0" expanded="false" />
+            <element signature="e#575#622#0" expanded="false" />
+            <element signature="e#624#666#0" expanded="false" />
+            <element signature="e#668#715#0" expanded="false" />
+            <element signature="e#717#765#0" expanded="false" />
+            <element signature="e#767#826#0" expanded="false" />
+            <element signature="e#828#876#0" expanded="false" />
+            <element signature="e#878#937#0" expanded="false" />
+            <element signature="e#939#991#0" expanded="false" />
+            <element signature="e#1171#1226#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tarefa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -545,16 +702,18 @@
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
+            <element signature="e#0#21#0" expanded="true" />
             <element signature="e#122#1356#0" expanded="false" />
             <element signature="e#1358#1514#0" expanded="false" />
-            <element signature="e#1516#1583#0" expanded="false" />
-            <element signature="e#1585#1676#0" expanded="false" />
-            <element signature="e#1678#1746#0" expanded="false" />
-            <element signature="e#1748#1837#0" expanded="false" />
-            <element signature="e#1839#1903#0" expanded="false" />
-            <element signature="e#1905#1996#0" expanded="false" />
-            <element signature="e#2221#2334#0" expanded="false" />
-            <element signature="e#2336#2433#0" expanded="false" />
+            <element signature="e#1516#1578#0" expanded="false" />
+            <element signature="e#1580#1671#0" expanded="false" />
+            <element signature="e#1673#1741#0" expanded="false" />
+            <element signature="e#1743#1832#0" expanded="false" />
+            <element signature="e#1834#1898#0" expanded="false" />
+            <element signature="e#1900#1991#0" expanded="false" />
+            <element signature="e#1993#2218#0" expanded="false" />
+            <element signature="e#2220#2333#0" expanded="false" />
+            <element signature="e#2335#2432#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -582,16 +741,18 @@
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
+            <element signature="e#0#21#0" expanded="true" />
             <element signature="e#122#1356#0" expanded="false" />
             <element signature="e#1358#1514#0" expanded="false" />
-            <element signature="e#1516#1583#0" expanded="false" />
-            <element signature="e#1585#1676#0" expanded="false" />
-            <element signature="e#1678#1746#0" expanded="false" />
-            <element signature="e#1748#1837#0" expanded="false" />
-            <element signature="e#1839#1903#0" expanded="false" />
-            <element signature="e#1905#1996#0" expanded="false" />
-            <element signature="e#2221#2334#0" expanded="false" />
-            <element signature="e#2336#2433#0" expanded="false" />
+            <element signature="e#1516#1578#0" expanded="false" />
+            <element signature="e#1580#1671#0" expanded="false" />
+            <element signature="e#1673#1741#0" expanded="false" />
+            <element signature="e#1743#1832#0" expanded="false" />
+            <element signature="e#1834#1898#0" expanded="false" />
+            <element signature="e#1900#1991#0" expanded="false" />
+            <element signature="e#1993#2218#0" expanded="false" />
+            <element signature="e#2220#2333#0" expanded="false" />
+            <element signature="e#2335#2432#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,16 +794,18 @@
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
+            <element signature="e#0#21#0" expanded="true" />
             <element signature="e#122#1356#0" expanded="false" />
             <element signature="e#1358#1514#0" expanded="false" />
-            <element signature="e#1516#1583#0" expanded="false" />
-            <element signature="e#1585#1676#0" expanded="false" />
-            <element signature="e#1678#1746#0" expanded="false" />
-            <element signature="e#1748#1837#0" expanded="false" />
-            <element signature="e#1839#1903#0" expanded="false" />
-            <element signature="e#1905#1996#0" expanded="false" />
-            <element signature="e#2221#2334#0" expanded="false" />
-            <element signature="e#2336#2433#0" expanded="false" />
+            <element signature="e#1516#1578#0" expanded="false" />
+            <element signature="e#1580#1671#0" expanded="false" />
+            <element signature="e#1673#1741#0" expanded="false" />
+            <element signature="e#1743#1832#0" expanded="false" />
+            <element signature="e#1834#1898#0" expanded="false" />
+            <element signature="e#1900#1991#0" expanded="false" />
+            <element signature="e#1993#2218#0" expanded="false" />
+            <element signature="e#2220#2333#0" expanded="false" />
+            <element signature="e#2335#2432#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -769,64 +932,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TempoSetup.cpp">
+    <entry file="file://$PROJECT_DIR$/TempoSetup.cpp" />
+    <entry file="file://$PROJECT_DIR$/TempoSetup.h" />
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="81">
+          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solucao.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#52#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Job.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TempoSetup.h">
+    <entry file="file://$PROJECT_DIR$/Job.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problema.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="18" />
           <folding>
+            <element signature="e#0#21#0" expanded="true" />
             <element signature="e#122#1356#0" expanded="false" />
             <element signature="e#1358#1514#0" expanded="false" />
-            <element signature="e#1516#1583#0" expanded="false" />
-            <element signature="e#1585#1676#0" expanded="false" />
-            <element signature="e#1678#1746#0" expanded="false" />
-            <element signature="e#1748#1837#0" expanded="false" />
-            <element signature="e#1839#1903#0" expanded="false" />
-            <element signature="e#1905#1996#0" expanded="false" />
-            <element signature="e#2221#2334#0" expanded="false" />
-            <element signature="e#2336#2433#0" expanded="false" />
+            <element signature="e#1516#1578#0" expanded="false" />
+            <element signature="e#1580#1671#0" expanded="false" />
+            <element signature="e#1673#1741#0" expanded="false" />
+            <element signature="e#1743#1832#0" expanded="false" />
+            <element signature="e#1834#1898#0" expanded="false" />
+            <element signature="e#1900#1991#0" expanded="false" />
+            <element signature="e#1993#2218#0" expanded="false" />
+            <element signature="e#2220#2333#0" expanded="false" />
+            <element signature="e#2335#2432#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problema.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="408">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="33" />
           <folding>
             <element signature="e#51#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tarefa.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tarefa.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
           <folding>
+            <element signature="e#0#19#0" expanded="true" />
             <element signature="e#333#377#0" expanded="false" />
             <element signature="e#379#430#0" expanded="false" />
             <element signature="e#432#476#0" expanded="false" />
@@ -840,17 +1020,25 @@
             <element signature="e#828#876#0" expanded="false" />
             <element signature="e#878#937#0" expanded="false" />
             <element signature="e#939#991#0" expanded="false" />
-            <element signature="e#1130#1185#0" expanded="false" />
+            <element signature="e#1171#1226#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/Tarefa.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="-633">
+          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solucao.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
