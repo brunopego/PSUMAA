@@ -89,7 +89,7 @@ int Problema::getCusto() const {
     for(auto &tarefa : Problema::tarefas){
         total += (tarefa.getAlfa() * tarefa.getAntecipacao()) + (tarefa.getBeta() * tarefa.getAtraso());
     }
-    return 0;
+    return total;
 }
 
 void Problema::setTempoSetup(const int &x, const int &y, const int &valor) {
