@@ -14,12 +14,15 @@ private:
     vector<Tarefa> tarefas; // vetor com os dados de cada tarefa do problema
     string nome_arq; // nome do arquivo com as instancias
     int qtd_tarefas; // numero de tarefas a serem programadas
+    int** matriz_ts = nullptr; // matriz com o tempo de setup
 
 public:
 
-    Problema();
+    Problema(const string& nome_arq);
 
-    const vector<Tarefa> &getTarefas() const;
+    ~Problema();
+
+    vector<Tarefa> getTarefas() const;
 
     void addTarefa(const Tarefa &tarefas);
 
@@ -32,6 +35,10 @@ public:
     void setQtd_tarefas(int qtd_tarefas);
 
     int getCusto() const;
+
+    void setTempoSetup(const int& x, const int& y, const int& valor);
+
+    int getTempoSetup(const int& x, const int& y);
 
 };
 

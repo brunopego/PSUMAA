@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/Problema.cpp.o"
   "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/Tarefa.cpp.o"
-  "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/TempoSetup.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/TempoSetup.cpp.o"
   "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp" "/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

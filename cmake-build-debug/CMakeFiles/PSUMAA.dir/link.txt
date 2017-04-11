@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/PSUMAA.dir/main.cpp.o CMakeFiles/PSUMAA.dir/Tarefa.cpp.o CMakeFiles/PSUMAA.dir/Problema.cpp.o CMakeFiles/PSUMAA.dir/TempoSetup.cpp.o  -o PSUMAA 
+/usr/bin/c++   -g   CMakeFiles/PSUMAA.dir/main.cpp.o CMakeFiles/PSUMAA.dir/Tarefa.cpp.o CMakeFiles/PSUMAA.dir/Problema.cpp.o  -o PSUMAA 

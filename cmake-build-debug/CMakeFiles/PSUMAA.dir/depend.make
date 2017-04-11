@@ -8,11 +8,7 @@ CMakeFiles/PSUMAA.dir/Problema.cpp.o: ../Tarefa.h
 CMakeFiles/PSUMAA.dir/Tarefa.cpp.o: ../Tarefa.cpp
 CMakeFiles/PSUMAA.dir/Tarefa.cpp.o: ../Tarefa.h
 
-CMakeFiles/PSUMAA.dir/TempoSetup.cpp.o: ../TempoSetup.cpp
-CMakeFiles/PSUMAA.dir/TempoSetup.cpp.o: ../TempoSetup.h
-
 CMakeFiles/PSUMAA.dir/main.cpp.o: ../Problema.h
 CMakeFiles/PSUMAA.dir/main.cpp.o: ../Tarefa.h
-CMakeFiles/PSUMAA.dir/main.cpp.o: ../TempoSetup.h
 CMakeFiles/PSUMAA.dir/main.cpp.o: ../main.cpp
 

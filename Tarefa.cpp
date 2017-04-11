@@ -80,12 +80,12 @@ void Tarefa::setFim(int fim) {
 }
 
 int Tarefa::getAntecipacao() const {
-    if(this->fim < this->e) return (this->e) - (this->fim);
+    if(this->fim < this->e) return ((this->e) - (this->fim));
     return 0;
 }
 
 int Tarefa::getAtraso() const {
-    if(this->fim > this->t) return (this->fim) - (this->t);
+    if(this->fim > this->t) return ((this->fim) - (this->t));
     return 0;
 }
 

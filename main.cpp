@@ -5,63 +5,38 @@
 
 #include "Tarefa.h"
 #include "Problema.h"
-#include "TempoSetup.h"
 
 using namespace std;
-
-
-void ler_arquivo(const string& nome_arq, Problema *p);
-
-TempoSetup tempo_setup;
-
 
 int main() {
 
     string nome_arq = "instancias/dados/INST0703.dat";
-    Problema p;
+    Problema p(nome_arq);
 
-    ler_arquivo(nome_arq, &p);
+    //cout << p.getTempoSetup(p.getTarefas().at(0).getId(), p.getTarefas().at(1).getId()) << endl;
 
-    //cout << "coisa" << endl;
+
+    p.getTarefas().at(0).setInicio(108);
+    p.getTarefas().at(1).setInicio(284);
+    p.getTarefas().at(2).setInicio(97);
+    p.getTarefas().at(3).setInicio(188);
+    p.getTarefas().at(4).setInicio(267);
+    p.getTarefas().at(5).setInicio(13);
+    p.getTarefas().at(6).setInicio(198);
+
+    cout << "Custo Total: " << p.getCusto() << endl;
+
+    /*
+    for(auto &tarefa : p.getTarefas()){
+        cout << "-------------------------------------" << endl;
+        cout << "ID: " << tarefa.getId() << endl;
+        cout << "ALFA: " << tarefa.getAlfa() << endl;
+        cout << "BETA: " << tarefa.getBeta() << endl;
+    }
+     */
 
 
     // ----------------------------------------------------------
-    tempo_setup.~TempoSetup();
+
     return 0;
-}
-
-void ler_arquivo(const string& nome_arq, Problema *p) {
-
-    int qtd_tarefas;
-
-    ifstream reader(nome_arq);
-    
-    reader >> qtd_tarefas;
-    tempo_setup = qtd_tarefas;
-
-    // Campos tarefa:
-    int id; // id da tarefa
-    int tp; // tempo necessario para processamento da tarefa
-    int e; // e -> earliness, data de inicio da janela
-    int t; // t -> tardiness, data final da janela
-    int alfa; // custo de antecipacao
-    int beta; // custo de atraso
-
-
-    for (int i = 0; i < qtd_tarefas; ++i) {
-        reader >> id >> tp >> e >> t >> alfa >> beta;
-        Tarefa tar(id, tp, e, t, alfa, beta);
-        p->addTarefa(tar);
-    }
-
-    int valor = 0;
-    for (int i = 0; i < qtd_tarefas; ++i) {
-        for (int j = 0; j < qtd_tarefas; ++j) {
-            reader >> valor;
-            tempo_setup.setTempoSetup(i, j, valor);
-        }
-    }
-
-    reader.close();
-
 }
