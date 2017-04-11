@@ -22,7 +22,7 @@ public:
 
     ~Problema();
 
-    vector<Tarefa> getTarefas() const;
+    vector<Tarefa> &getTarefas();
 
     void addTarefa(const Tarefa &tarefas);
 
