@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 int main() {
 
     //string nome_arq = "instancias/dados/INST0703.dat";

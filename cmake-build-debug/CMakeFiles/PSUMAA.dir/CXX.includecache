@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp
+HeuristicaConstrutiva.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.h
+
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.h
+Solucao.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+Job.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp
 Job.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
@@ -41,6 +51,8 @@ Tarefa.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+algorithm
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 Job.h

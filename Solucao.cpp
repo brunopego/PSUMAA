@@ -2,12 +2,14 @@
 #include "Tarefa.h"
 #include "Problema.h"
 
+#include <algorithm>
+
 //using namespace std;
 
 Solucao::Solucao(Problema* prob) {
     this->prob = prob;
     for (int i = 1; i <= this->prob->getQtd_tarefas() ; ++i) {
-        this->jobs.push_back(Job(i));
+        this->jobs.push_back(Job(prob, i));
     }
 }
 
@@ -45,4 +47,34 @@ int Solucao::getCusto() const {
         total += (job_alfa * job_antecipacao) + (job_beta * job_atraso);
     }
     return total;
+}
+
+bool Solucao::edd_funcao(const Job &j, const Job& q) {
+    int jEarliness = prob->getTarefas().at(j.getId()-1).getE();
+    int qEarliness = prob->getTarefas().at(q.getId()-1).getE();
+    return (jEarliness < qEarliness);
+}
+
+bool Solucao::tdd_funcao(const Job &j, const Job& q) {
+    int jTardiness = prob->getTarefas().at(j.getId()-1).getT();
+    int qTardiness = prob->getTarefas().at(q.getId()-1).getT();
+    return (jTardiness > qTardiness);
+}
+
+bool Solucao::spt_funcao(const Job &j, const Job& q) {
+    int jTempoProcessamento = prob->getTarefas().at(j.getId()-1).getTp();
+    int qTempoProcessamento = prob->getTarefas().at(q.getId()-1).getTp();
+    return (jTempoProcessamento < qTempoProcessamento);
+}
+
+void Solucao::edd_ordena() {
+    sort(jobs.begin(), jobs.end(), edd_funcao);
+}
+
+void Solucao::tdd_ordena() {
+    sort(jobs.begin(), jobs.end(), tdd_funcao);
+}
+
+void Solucao::stp_ordena() {
+    sort(jobs.begin(), jobs.end(), spt_funcao);
 }

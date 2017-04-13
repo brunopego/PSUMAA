@@ -3,5 +3,5 @@ project(PSUMAA)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Tarefa.cpp Tarefa.h Problema.cpp Problema.h Solucao.cpp Solucao.h Job.cpp Job.h)
+set(SOURCE_FILES main.cpp Tarefa.cpp Tarefa.h Problema.cpp Problema.h Solucao.cpp Solucao.h Job.cpp Job.h HeuristicaConstrutiva.cpp HeuristicaConstrutiva.h)
 add_executable(PSUMAA ${SOURCE_FILES})

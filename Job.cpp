@@ -2,11 +2,13 @@
 
 Job::Job() {}
 
-Job::Job(const int &id) {
+Job::Job(Problema *prob, const int &id) {
+    this->prob = prob;
     this->id = id;
 }
 
-Job::Job(const int &id, const int &inicio) {
+Job::Job(Problema *prob, const int &id, const int &inicio) {
+    this->prob = prob;
     this->id = id;
     this->inicio = inicio;
 }

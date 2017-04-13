@@ -123,6 +123,33 @@ PSUMAA/fast:
 	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/build
 .PHONY : PSUMAA/fast
 
+HeuristicaConstrutiva.o: HeuristicaConstrutiva.cpp.o
+
+.PHONY : HeuristicaConstrutiva.o
+
+# target to build an object file
+HeuristicaConstrutiva.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o
+.PHONY : HeuristicaConstrutiva.cpp.o
+
+HeuristicaConstrutiva.i: HeuristicaConstrutiva.cpp.i
+
+.PHONY : HeuristicaConstrutiva.i
+
+# target to preprocess a source file
+HeuristicaConstrutiva.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.i
+.PHONY : HeuristicaConstrutiva.cpp.i
+
+HeuristicaConstrutiva.s: HeuristicaConstrutiva.cpp.s
+
+.PHONY : HeuristicaConstrutiva.s
+
+# target to generate assembly for a file
+HeuristicaConstrutiva.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.s
+.PHONY : HeuristicaConstrutiva.cpp.s
+
 Job.o: Job.cpp.o
 
 .PHONY : Job.o
@@ -267,6 +294,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PSUMAA"
+	@echo "... HeuristicaConstrutiva.o"
+	@echo "... HeuristicaConstrutiva.i"
+	@echo "... HeuristicaConstrutiva.s"
 	@echo "... Job.o"
 	@echo "... Job.i"
 	@echo "... Job.s"
