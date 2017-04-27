@@ -10,6 +10,8 @@ CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o: ../Tarefa.h
 
 CMakeFiles/PSUMAA.dir/Job.cpp.o: ../Job.cpp
 CMakeFiles/PSUMAA.dir/Job.cpp.o: ../Job.h
+CMakeFiles/PSUMAA.dir/Job.cpp.o: ../Problema.h
+CMakeFiles/PSUMAA.dir/Job.cpp.o: ../Tarefa.h
 
 CMakeFiles/PSUMAA.dir/Problema.cpp.o: ../Problema.cpp
 CMakeFiles/PSUMAA.dir/Problema.cpp.o: ../Problema.h

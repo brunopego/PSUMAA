@@ -26,17 +26,11 @@ public:
 
     int getAtraso(const Job& job) const;
 
-    bool edd_funcao(const Job& j, const Job& q);
-
-    bool tdd_funcao(const Job& j, const Job& q);
-
-    bool spt_funcao(const Job& j, const Job& q);
-
     void edd_ordena();
 
     void tdd_ordena();
 
-    void stp_ordena();
+    void spt_ordena();
 
 };
 

@@ -6,16 +6,17 @@
 class Job {
 private:
     int id; // id do job = id da tarefa
-    int inicio; // tempo de inicio de processamento do job/tarefa
-    Problema *prob;
+    int inicio = 0; // tempo de inicio de processamento do job/tarefa
 
 public:
 
+    const Tarefa* t;
+
     Job();
 
-    Job(Problema *prob, const int& id);
+    Job(Tarefa *t, const int& id);
 
-    Job(Problema *prob, const int& id, const int& inicio);
+    Job(Tarefa *t, const int& id, const int& inicio);
 
     int getId() const;
 

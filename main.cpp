@@ -17,7 +17,7 @@ int main() {
 
     Problema p("instancias/dados/INST0703.dat");
     Solucao sol_p(&p);
-
+    /*
     //INST0703.dat custo .sol = 2117
     sol_p.getJobs().at(0).setInicio(108);
     sol_p.getJobs().at(1).setInicio(284);
@@ -26,10 +26,33 @@ int main() {
     sol_p.getJobs().at(4).setInicio(267);
     sol_p.getJobs().at(5).setInicio(13);
     sol_p.getJobs().at(6).setInicio(198);
+    */
 
+    //sol_p.edd_ordena();
+    //cout << "Custo Total (edd) : " << sol_p.getCusto() << endl;
+
+    //sol_p.tdd_ordena();
+    //cout << "Custo Total (tdd) : " << sol_p.getCusto() << endl;
+    //sol_p.spt_ordena();
+    //cout << "Custo Total (spt) : " << sol_p.getCusto() << endl;
 
     Problema q("instancias/dados/INST1001.dat");
     Solucao sol_q(&q);
+
+    //sol_q.edd_ordena();
+    sol_p.tdd_ordena();
+    //sol_p.spt_ordena();
+    //cout << "Custo Total (edd) : " << sol_q.getCusto() << endl;
+
+    for(auto job : sol_p.getJobs()){
+        cout << job.getId() << endl;
+    }
+
+    //sol_q.tdd_ordena();
+    //cout << "Custo Total (tdd) : " << sol_q.getCusto() << endl;
+    //sol_p.spt_ordena();
+    //cout << "Custo Total (spt) : " << sol_p.getCusto() << endl;
+
 
     //INST1001.dat custo .sol = 14411
     sol_q.getJobs().at(0).setInicio(10);
@@ -44,8 +67,8 @@ int main() {
     sol_q.getJobs().at(9).setInicio(366);
 
 
-    cout << "Custo Total (p) : " << sol_p.getCusto() << endl;
-    cout << "Custo Total (q) : " << sol_q.getCusto() << endl;
+    //cout << "Custo Total (p) : " << sol_p.getCusto() << endl;
+    //cout << "Custo Total (q) : " << sol_q.getCusto() << endl;
 
     /*
     for(auto &tarefa : p.getTarefas()){
