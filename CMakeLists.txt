@@ -4,8 +4,6 @@ project(PSUMAA)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        HeuristicaConstrutiva.cpp
-        HeuristicaConstrutiva.h
         Job.cpp
         Job.h
         main.cpp

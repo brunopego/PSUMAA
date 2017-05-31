@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp">
-			<Option target="PSUMAA"/>
-		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.h">
-			<Option target="PSUMAA"/>
-		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>

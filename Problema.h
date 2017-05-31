@@ -18,26 +18,37 @@ private:
 
 public:
 
+
     Problema(const string& nome_arq);
 
+    // Destrutor da classe, a memoria alocada para a matriz e liberada
     ~Problema();
 
+    // retorna o vetor de tarefas contido no problema
     vector<Tarefa> &getTarefas();
 
+    // adiciona uma tarefa ao problema
     void addTarefa(const Tarefa &tarefas);
 
+    // retorna o nome do arquivo que contem o problema
     const string &getNome_arq() const;
 
+    // altera o nome do arquivo que contem o problema
     void setNome_arq(const string &nome_arq);
 
+    // retorna a quantidade de tarefas que contem no problema
     int getQtd_tarefas() const;
 
+    // altera a quantidade de tarefas que contem no problema
     void setQtd_tarefas(int qtd_tarefas);
 
+    // retorna o custo do problema (OBS: Utilizar a funcao correspondente na classe Solucao)
     int getCusto() const;
 
+    // altera o tempo de setup entre uma tarefa e outra
     void setTempoSetup(const int& x, const int& y, const int& valor);
 
+    // retorna o tempo de setup entre uma tarefa e outra
     int getTempoSetup(const int& x, const int& y);
 
 };

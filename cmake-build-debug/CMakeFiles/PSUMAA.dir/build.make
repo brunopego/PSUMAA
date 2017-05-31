@@ -57,33 +57,9 @@ include CMakeFiles/PSUMAA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PSUMAA.dir/flags.make
 
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o: ../HeuristicaConstrutiva.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp
-
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp > CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.i
-
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp -o CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.s
-
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.requires:
-
-.PHONY : CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.requires
-
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.provides: CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.provides.build
-.PHONY : CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.provides
-
-CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o
-
-
 CMakeFiles/PSUMAA.dir/Job.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
 CMakeFiles/PSUMAA.dir/Job.cpp.o: ../Job.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PSUMAA.dir/Job.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PSUMAA.dir/Job.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/Job.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp
 
 CMakeFiles/PSUMAA.dir/Job.cpp.i: cmake_force
@@ -107,7 +83,7 @@ CMakeFiles/PSUMAA.dir/Job.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/Job.cpp.o
 
 CMakeFiles/PSUMAA.dir/main.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
 CMakeFiles/PSUMAA.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PSUMAA.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PSUMAA.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/main.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp
 
 CMakeFiles/PSUMAA.dir/main.cpp.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/PSUMAA.dir/main.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/main.cpp.
 
 CMakeFiles/PSUMAA.dir/Problema.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
 CMakeFiles/PSUMAA.dir/Problema.cpp.o: ../Problema.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PSUMAA.dir/Problema.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PSUMAA.dir/Problema.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/Problema.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp
 
 CMakeFiles/PSUMAA.dir/Problema.cpp.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/PSUMAA.dir/Problema.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/Probl
 
 CMakeFiles/PSUMAA.dir/Solucao.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
 CMakeFiles/PSUMAA.dir/Solucao.cpp.o: ../Solucao.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PSUMAA.dir/Solucao.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PSUMAA.dir/Solucao.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/Solucao.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.cpp
 
 CMakeFiles/PSUMAA.dir/Solucao.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/PSUMAA.dir/Solucao.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/Soluca
 
 CMakeFiles/PSUMAA.dir/Tarefa.cpp.o: CMakeFiles/PSUMAA.dir/flags.make
 CMakeFiles/PSUMAA.dir/Tarefa.cpp.o: ../Tarefa.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PSUMAA.dir/Tarefa.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PSUMAA.dir/Tarefa.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUMAA.dir/Tarefa.cpp.o -c /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
 
 CMakeFiles/PSUMAA.dir/Tarefa.cpp.i: cmake_force
@@ -203,7 +179,6 @@ CMakeFiles/PSUMAA.dir/Tarefa.cpp.o.provides.build: CMakeFiles/PSUMAA.dir/Tarefa.
 
 # Object files for target PSUMAA
 PSUMAA_OBJECTS = \
-"CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o" \
 "CMakeFiles/PSUMAA.dir/Job.cpp.o" \
 "CMakeFiles/PSUMAA.dir/main.cpp.o" \
 "CMakeFiles/PSUMAA.dir/Problema.cpp.o" \
@@ -213,7 +188,6 @@ PSUMAA_OBJECTS = \
 # External object files for target PSUMAA
 PSUMAA_EXTERNAL_OBJECTS =
 
-PSUMAA: CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o
 PSUMAA: CMakeFiles/PSUMAA.dir/Job.cpp.o
 PSUMAA: CMakeFiles/PSUMAA.dir/main.cpp.o
 PSUMAA: CMakeFiles/PSUMAA.dir/Problema.cpp.o
@@ -221,7 +195,7 @@ PSUMAA: CMakeFiles/PSUMAA.dir/Solucao.cpp.o
 PSUMAA: CMakeFiles/PSUMAA.dir/Tarefa.cpp.o
 PSUMAA: CMakeFiles/PSUMAA.dir/build.make
 PSUMAA: CMakeFiles/PSUMAA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable PSUMAA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable PSUMAA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PSUMAA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -229,7 +203,6 @@ CMakeFiles/PSUMAA.dir/build: PSUMAA
 
 .PHONY : CMakeFiles/PSUMAA.dir/build
 
-CMakeFiles/PSUMAA.dir/requires: CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o.requires
 CMakeFiles/PSUMAA.dir/requires: CMakeFiles/PSUMAA.dir/Job.cpp.o.requires
 CMakeFiles/PSUMAA.dir/requires: CMakeFiles/PSUMAA.dir/main.cpp.o.requires
 CMakeFiles/PSUMAA.dir/requires: CMakeFiles/PSUMAA.dir/Problema.cpp.o.requires

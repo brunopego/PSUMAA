@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PSUMAA.dir/HeuristicaConstrutiva.cpp.o"
   "CMakeFiles/PSUMAA.dir/Job.cpp.o"
   "CMakeFiles/PSUMAA.dir/main.cpp.o"
   "CMakeFiles/PSUMAA.dir/Problema.cpp.o"

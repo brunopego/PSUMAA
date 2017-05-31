@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.cpp
-HeuristicaConstrutiva.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.h
-
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/HeuristicaConstrutiva.h
-Solucao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
-Job.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
-
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp
 Job.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
@@ -55,6 +45,10 @@ Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 algorithm
 -
+random
+-
+ctime
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 Job.h
@@ -62,6 +56,8 @@ Job.h
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 vector
+-
+deque
 -
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
@@ -89,4 +85,6 @@ Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 Solucao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+random
+-
 

@@ -5,20 +5,21 @@
 #include "Job.h"
 #include "Problema.h"
 #include <vector>
+#include <deque>
 
 using namespace std;
 
 class Solucao {
 
 private:
-    vector<Job> jobs; // vetor com os dados de cada tarefa do problema
-    Problema *prob;
+    deque<Job> jobs; // vetor com os dados de cada tarefa do problema
+    Problema *prob; // referencia para o problema
     //int qtd_tarefas; // quantidade de jobs/tarefas
 
 public:
     Solucao(Problema* prob);
 
-    vector<Job> &getJobs();
+    deque<Job> &getJobs();
 
     int getCusto() const;
 
@@ -26,11 +27,18 @@ public:
 
     int getAtraso(const Job& job) const;
 
-    void edd_ordena();
+    // Metodo guloso Data de Entrega mais Próxima - EDD (Earliest Due Date)
+    void eddGuloso();
 
-    void tdd_ordena();
+    // Metodo parcialmente guloso Data de Entrega mais Próxima - EDD (Earliest Due Date)
+    void ordena(float alfa, int tipo);
 
-    void spt_ordena();
+    // Metodo guloso Data de Entrega mais Distante - TDD (Tardiest Due Date)
+    void tddGuloso();
+
+    // Metodo guloso Menor Tempo de Processamento - SPT (Shortest Processing Time)
+    void sptGuloso();
+
 
 };
 
