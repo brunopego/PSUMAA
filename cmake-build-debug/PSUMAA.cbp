@@ -90,6 +90,12 @@
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h">
 			<Option target="PSUMAA"/>
 		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.cpp">
+			<Option target="PSUMAA"/>
+		</Unit>
+		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h">
+			<Option target="PSUMAA"/>
+		</Unit>
 		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>

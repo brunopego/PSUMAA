@@ -150,6 +150,33 @@ Job.cpp.s:
 	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Job.cpp.s
 .PHONY : Job.cpp.s
 
+Populacao.o: Populacao.cpp.o
+
+.PHONY : Populacao.o
+
+# target to build an object file
+Populacao.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Populacao.cpp.o
+.PHONY : Populacao.cpp.o
+
+Populacao.i: Populacao.cpp.i
+
+.PHONY : Populacao.i
+
+# target to preprocess a source file
+Populacao.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Populacao.cpp.i
+.PHONY : Populacao.cpp.i
+
+Populacao.s: Populacao.cpp.s
+
+.PHONY : Populacao.s
+
+# target to generate assembly for a file
+Populacao.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUMAA.dir/build.make CMakeFiles/PSUMAA.dir/Populacao.cpp.s
+.PHONY : Populacao.cpp.s
+
 Problema.o: Problema.cpp.o
 
 .PHONY : Problema.o
@@ -270,6 +297,9 @@ help:
 	@echo "... Job.o"
 	@echo "... Job.i"
 	@echo "... Job.s"
+	@echo "... Populacao.o"
+	@echo "... Populacao.i"
+	@echo "... Populacao.s"
 	@echo "... Problema.o"
 	@echo "... Problema.i"
 	@echo "... Problema.s"

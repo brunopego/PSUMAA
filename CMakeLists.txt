@@ -12,6 +12,6 @@ set(SOURCE_FILES
         Solucao.cpp
         Solucao.h
         Tarefa.cpp
-        Tarefa.h)
+        Tarefa.h Populacao.cpp Populacao.h)
 
 add_executable(PSUMAA ${SOURCE_FILES})

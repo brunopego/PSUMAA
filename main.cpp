@@ -9,6 +9,8 @@
 
 #include <random>
 
+#include <functional>
+
 using namespace std;
 
 float gerarAlfa(){
@@ -29,6 +31,7 @@ int main() {
 
     //Problema p("instancias/dados/INST0703.dat");
     //Problema p("instancias/dados/INST7501.dat");
+    Problema p("instancias/dados/INST1001.dat");
     Solucao sol_p(&p);
 
     /*
@@ -120,12 +123,21 @@ int main() {
     cout << "Tam LRC: " << tam_lrc << endl;
 
 */
+
+    Solucao sol_q(&p);
+
     sol_p.ordena(gerarAlfa(), 1);
+    sol_q.ordena(gerarAlfa(), 1);
+
     //sol_p.eddGuloso();
 
+    /*
     for(auto job : sol_p.getJobs()){
         cout << job.getId() << endl;
     }
+     */
+
+    sol_p.imprimeSolucao();
 
     return 0;
 }
