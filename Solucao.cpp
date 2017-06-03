@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -116,15 +117,19 @@ void Solucao::ordena(float alfa, int tipo) {
     vector<Job> jobsOrdena; // Vetor auxiliar
 
     if (tipo == 1) {
+        //ordenacao edd
         sort(jobs.begin(), jobs.end(), edd_funcao);
     }
     else if (tipo == 2) {
+        //ordenacao tdd
         sort(jobs.begin(), jobs.end(), tdd_funcao);
     }
     else if (tipo == 3) {
+        //ordenacao spt
         sort(jobs.begin(), jobs.end(), spt_funcao);
     }
     else {
+        //ordenacao aleatoria
         alfa = 1;
     }
 
@@ -141,6 +146,41 @@ void Solucao::ordena(float alfa, int tipo) {
     for(auto job : jobsOrdena){
         jobs.push_back(job);
     }
+
+}
+
+void Solucao::imprimeSolucao() {
+
+    cout << left;
+    cout << endl;
+    cout << "=======================SOLUCAO=======================" << endl << endl;
+    cout << "Problema: " << (*prob).getNome_arq() << endl;
+    cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
+    cout << "Custo: " << getCusto() << endl;
+    cout << endl;
+
+    cout << setw(6) << "Job"; // id do job
+    cout << setw(8) << "TP[i]"; // tempo de processamento
+    cout << setw(8) << "S[i][j]"; // tempo de setup
+    cout << setw(8) << "H1[i]"; // tempo adiantado
+    cout << setw(8) << "C1[i]"; // valor da penalidade por antecipacao
+    cout << setw(8) << "H2[i]"; // tempo atrasado
+    cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
+    cout << endl;
+
+    for (int i = 0; i < jobs.size(); i++){
+        cout << setw(6) << jobs[i].getId();
+        cout << setw(8) << jobs[i].t->getTp();
+        cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
+        cout << setw(8) << getAntecipacao(jobs[i]);
+        cout << setw(8) << jobs[i].t->getAlfa() * getAntecipacao(jobs[i]);
+        cout << setw(8) << getAtraso(jobs[i]);
+        cout << setw(8) << jobs[i].t->getBeta() * getAtraso(jobs[i]);
+        cout << endl;
+    }
+
+    cout << endl;
+    cout << "=====================================================" << endl;
 
 }
 

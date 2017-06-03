@@ -39,6 +39,8 @@ public:
     // Metodo guloso Menor Tempo de Processamento - SPT (Shortest Processing Time)
     void sptGuloso();
 
+    void imprimeSolucao();
+
 
 };
 
