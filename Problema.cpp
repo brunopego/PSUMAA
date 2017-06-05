@@ -7,7 +7,7 @@
 using namespace std;
 
 Problema::Problema(const string& nome_arq) {
-
+    this->nome_arq = nome_arq;
     ifstream reader(nome_arq);
 
     // le primeira informacao do aquivo que e a qtd de tarefas
