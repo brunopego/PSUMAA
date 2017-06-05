@@ -1,15 +1,11 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
+#include <random>
+#include <ctime>
 
-#include "Tarefa.h"
 #include "Problema.h"
 #include "Solucao.h"
+#include "Populacao.h"
 
-#include <random>
-
-#include <functional>
 
 using namespace std;
 
@@ -126,8 +122,15 @@ int main() {
 
     Solucao sol_q(&p);
 
-    sol_p.ordena(gerarAlfa(), 1);
-    sol_q.ordena(gerarAlfa(), 1);
+    //sol_p.ordena(gerarAlfa(), 1);
+    //sol_q.ordena(gerarAlfa(), 1);
+
+    sol_p.ordena(0,1);
+    sol_q.ordena(0,1);
+
+    Populacao pop;
+    pop.insere(sol_p);
+    pop.insere(sol_q);
 
     //sol_p.eddGuloso();
 
@@ -137,7 +140,7 @@ int main() {
     }
      */
 
-    sol_p.imprimeSolucao();
+    //sol_p.imprimeSolucao();
 
     return 0;
 }
