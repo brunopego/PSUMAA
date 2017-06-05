@@ -26,7 +26,12 @@ public:
 
     void setInicio(int inicio);
 
+    bool operator==(const Job&  job) const;
+
+    bool operator!=(const Job&  job) const;
+
 };
 
 
 #endif //PSUMAA_JOB_H
+

@@ -28,3 +28,11 @@ int Job::getInicio() const {
 void Job::setInicio(int inicio) {
     Job::inicio = inicio;
 }
+
+bool Job::operator==(const Job &job) const {
+    return this->id == job.id;
+}
+
+bool Job::operator!=(const Job &job) const {
+    return this->id != job.id;
+}
