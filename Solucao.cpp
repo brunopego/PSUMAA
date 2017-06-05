@@ -48,7 +48,7 @@ Solucao::Solucao(Problema* prob) {
     }
 }
 
-deque<Job> &Solucao::getJobs() {
+vector<Job> &Solucao::getJobs() {
     return jobs;
 }
 
@@ -171,7 +171,11 @@ void Solucao::imprimeSolucao() {
     for (int i = 0; i < jobs.size(); i++){
         cout << setw(6) << jobs[i].getId();
         cout << setw(8) << jobs[i].t->getTp();
-        cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
+        if (i != jobs.size()-1){
+            cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
+        } else{
+            cout << setw(8) << 0;
+        }
         cout << setw(8) << getAntecipacao(jobs[i]);
         cout << setw(8) << jobs[i].t->getAlfa() * getAntecipacao(jobs[i]);
         cout << setw(8) << getAtraso(jobs[i]);
@@ -182,5 +186,13 @@ void Solucao::imprimeSolucao() {
     cout << endl;
     cout << "=====================================================" << endl;
 
+}
+
+bool Solucao::operator==(const Solucao &sol) const {
+    if (sol.jobs.size() != this->jobs.size()) return false;
+    for(unsigned int i = 0; i < sol.jobs.size(); i++)
+        if(sol.jobs[i] != this->jobs[i])
+            return false;
+    return true;
 }
 

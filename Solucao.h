@@ -12,14 +12,14 @@ using namespace std;
 class Solucao {
 
 private:
-    deque<Job> jobs; // vetor com os dados de cada tarefa do problema
+    vector<Job> jobs; // vetor com os dados de cada tarefa do problema
     Problema *prob; // referencia para o problema
     //int qtd_tarefas; // quantidade de jobs/tarefas
 
 public:
     Solucao(Problema* prob);
 
-    deque<Job> &getJobs();
+    vector<Job> &getJobs();
 
     int getCusto() const;
 
@@ -40,6 +40,8 @@ public:
     void sptGuloso();
 
     void imprimeSolucao();
+
+    bool operator==(const Solucao&  sol) const;
 
 
 };
