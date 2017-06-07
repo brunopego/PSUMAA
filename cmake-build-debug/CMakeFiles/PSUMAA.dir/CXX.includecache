@@ -19,10 +19,10 @@ Populacao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
 utility
 -
+random
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
-Solucao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 vector
 -
 unordered_set
@@ -33,6 +33,10 @@ iostream
 -
 Job.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+Solucao.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+Problema.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp
 Problema.h
@@ -95,24 +99,14 @@ iostream
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp
 iostream
 -
-vector
+random
 -
-string
+ctime
 -
-fstream
--
-Tarefa.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 Solucao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 Populacao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
-random
--
-ctime
--
-functional
--
 

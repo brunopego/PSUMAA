@@ -1,12 +1,14 @@
 #ifndef PSUMAA_POPULACAO_H
 #define PSUMAA_POPULACAO_H
 
-#include "Solucao.h"
 #include <vector>
 #include <unordered_set>
 #include <string>
 #include <iostream>
+
 #include "Job.h"
+#include "Solucao.h"
+#include "Problema.h"
 
 using namespace std;
 
@@ -24,10 +26,26 @@ class Populacao {
 
 private:
     unordered_set<Solucao, HashSolucao> populacao;
+    Problema *prob; // referencia para o problema
+    int mi; // numero de pais selecionados
+    int lambda; // numero de filhos gerados
+    /*
+     * tipo 1 = edd
+     * tipo 2 = tdd
+     * tipo 3 = spt
+     * tipo >3 = aleatorio
+     */
+    int tipo;
 
 public:
 
+    Populacao(int mi, int lambda, int tipo, Problema* prob);
+
     void insere(Solucao& solucao);
+
+    //unordered_set& getPopulacao();
+
+    void imprimePopulacao();
 
 
 };

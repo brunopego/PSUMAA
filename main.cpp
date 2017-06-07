@@ -8,7 +8,7 @@
 
 
 using namespace std;
-
+/*
 float gerarAlfa(){
     // gera numero aleatorio entre 0 e 1
     random_device rd;
@@ -16,6 +16,7 @@ float gerarAlfa(){
     uniform_real_distribution<> dis(0,1);
     return (float) dis(gen);
 }
+ */
 
 int main() {
 
@@ -28,7 +29,7 @@ int main() {
     //Problema p("instancias/dados/INST0703.dat");
     //Problema p("instancias/dados/INST7501.dat");
     Problema p("instancias/dados/INST1001.dat");
-    Solucao sol_p(&p);
+    //Solucao sol_p(&p);
 
     /*
     //INST0703.dat custo .sol = 2117
@@ -120,17 +121,17 @@ int main() {
 
 */
 
-    Solucao sol_q(&p);
+    //Solucao sol_q(&p);
 
     //sol_p.ordena(gerarAlfa(), 1);
     //sol_q.ordena(gerarAlfa(), 1);
 
-    sol_p.ordena(0,1);
-    sol_q.ordena(0,1);
+    //sol_p.ordena(0,1);
+    //sol_q.ordena(0,1);
 
-    Populacao pop;
-    pop.insere(sol_p);
-    pop.insere(sol_q);
+    //Populacao pop;
+    //pop.insere(sol_p);
+    //pop.insere(sol_q);
 
     //sol_p.eddGuloso();
 
@@ -141,6 +142,9 @@ int main() {
      */
 
     //sol_p.imprimeSolucao();
+
+    Populacao pop(0,30,1,&p);
+    pop.imprimePopulacao();
 
     return 0;
 }
