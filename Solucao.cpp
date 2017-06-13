@@ -46,6 +46,10 @@ vector<Job> &Solucao::getJobs() {
     return jobs;
 }
 
+list <Job> &Solucao::getListaJobs() {
+    return lista_jobs;
+}
+
 int Solucao::getAntecipacao(const Job& job) const {
     int fim = job.getInicio() + job.t->getTp();
     int e = job.t->getE();
@@ -189,4 +193,6 @@ bool Solucao::operator==(const Solucao &sol) const {
             return false;
     return true;
 }
+
+
 

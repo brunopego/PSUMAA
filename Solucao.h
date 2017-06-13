@@ -5,7 +5,7 @@
 #include "Job.h"
 #include "Problema.h"
 #include <vector>
-#include <deque>
+#include <list>
 
 using namespace std;
 
@@ -13,6 +13,7 @@ class Solucao {
 
 private:
     vector<Job> jobs; // vetor com os dados de cada tarefa do problema
+    list<Job> lista_jobs; // lista com os dados do problema apos ordenacao
     Problema *prob; // referencia para o problema
     //int qtd_tarefas; // quantidade de jobs/tarefas
 
@@ -20,6 +21,8 @@ public:
     Solucao(Problema* prob);
 
     vector<Job> &getJobs();
+
+    list<Job> &getListaJobs();
 
     int getCusto() const;
 
