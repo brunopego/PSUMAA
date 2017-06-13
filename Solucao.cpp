@@ -14,21 +14,15 @@ using namespace std;
  */
 
 bool edd_funcao(const Job &j, const Job& q) {
-    int jEarliness = j.t->getE();
-    int qEarliness = q.t->getE();
-    return (jEarliness < qEarliness);
+    return (j.t->getE() < q.t->getE());
 }
 
 bool tdd_funcao(const Job &j, const Job& q) {
-    int jTardiness = j.t->getT();
-    int qTardiness = q.t->getT();
-    return (jTardiness > qTardiness);
+    return (j.t->getT() > q.t->getT());
 }
 
 bool spt_funcao(const Job &j, const Job& q) {
-    int jTempoProcessamento = j.t->getTp();
-    int qTempoProcessamento = q.t->getTp();
-    return (jTempoProcessamento < qTempoProcessamento);
+    return (j.t->getTp() < q.t->getTp());
 }
 
 // gera posicao aleatoria para lista restrita de candidatos (LRC)
@@ -110,7 +104,7 @@ void Solucao::ordena(float alfa, int tipo) {
      * tipo de ordenacao 4 e > = Aleatoria
      */
 
-    cout << "Alfa: " << alfa << endl;
+    //cout << "Alfa: " << alfa << endl;
     int tamLista;
     int tamLrc;
     int posicaoAleatoria;
@@ -137,7 +131,7 @@ void Solucao::ordena(float alfa, int tipo) {
     while(!jobs.empty()){
         tamLista  = jobs.size();
         tamLrc =  max(1, (int) (alfa * tamLista));
-        cout << "Tam LRC: " << tamLrc << endl;
+        //cout << "Tam LRC: " << tamLrc << endl;
         posicaoAleatoria = geraPosicaoAleatoria(tamLrc);
         jobsOrdena.push_back(jobs[posicaoAleatoria]);
         jobs.erase(jobs.begin() + posicaoAleatoria);
