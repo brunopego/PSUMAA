@@ -29,11 +29,13 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     // adiciona um individuo construido de forma gulosa
     Solucao s(prob);
     s.ordena(0, tipo);
+    s.gerarLinhaDoTempo();
     populacao.insert(s);
 
     while(i < (mi-1)){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
+        sol.gerarLinhaDoTempo();
         par = populacao.insert(sol);
         if(par.second) i++;
     }
