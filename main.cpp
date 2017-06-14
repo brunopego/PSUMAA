@@ -24,8 +24,13 @@ int main() {
     //Problema p("instancias/dados/INST7501.dat");
     Problema p("instancias/dados/INST1001.dat");
 
-    Populacao pop(100,0,1,&p);
+    //Populacao pop(100,0,1,&p);
     //pop.imprimePopulacao();
+
+    Solucao s(&p);
+    s.ordena(0.16,1);
+    s.gerarLinhaDoTempo();
+    s.imprimeSolucao();
 
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     auto duracao = duration_cast<milliseconds>( t2 - t1 ).count();
