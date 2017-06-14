@@ -83,7 +83,7 @@ Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 vector
 -
-deque
+list
 -
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
