@@ -35,9 +35,12 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     while(i < (mi-1)){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
-        sol.gerarLinhaDoTempo();
         par = populacao.insert(sol);
         if(par.second) i++;
+    }
+
+    for(auto sol : populacao){
+        sol.gerarLinhaDoTempo();
     }
 
 }
