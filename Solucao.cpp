@@ -150,18 +150,14 @@ void Solucao::imprimeSolucao() {
     cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
     cout << endl;
 
-    // limpa o vetor e preenche novamente atualizado, pois a lista_jobs pode ter sofrido alteracoes
-    jobs.clear();
-    for(auto job : lista_jobs){
-        jobs.push_back(job);
-    }
+    atualizaVetor();
 
     for (int i = 0; i < jobs.size(); i++){
         cout << setw(6) << jobs[i].getId();
         cout << setw(8) << jobs[i].t->getTp();
-        if (i != jobs.size()-1){
+        if (i != jobs.size() - 1) {
             cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
-        } else{
+        } else {
             cout << setw(8) << 0;
         }
         cout << setw(8) << getAntecipacao(jobs[i]);
@@ -182,6 +178,37 @@ bool Solucao::operator==(const Solucao &sol) const {
         if(sol.jobs[i] != this->jobs[i])
             return false;
     return true;
+}
+
+void Solucao::gerarLinhaDoTempo() {
+
+    atualizaVetor();
+    int tempo_inicio = 0;
+
+    for(int i = 0; i< jobs.size(); i++){
+        jobs[i].setInicio(tempo_inicio);
+        if (i != jobs.size() - 1) {
+            tempo_inicio += jobs[i].t->getTp() + (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId()) + 1;
+        } else {
+            tempo_inicio += jobs[i].t->getTp();
+        }
+    }
+
+    lista_jobs.clear();
+    for(auto job : jobs){
+        lista_jobs.push_back(job);
+    }
+
+    calculaCusto(); 
+
+}
+
+void Solucao::atualizaVetor() {
+    // limpa o vetor e preenche novamente atualizado, pois a lista_jobs pode ter sofrido alteracoes
+    jobs.clear();
+    for(auto job : lista_jobs){
+        jobs.push_back(job);
+    }
 }
 
 

@@ -37,6 +37,9 @@ public:
 
     bool operator==(const Solucao&  sol) const;
 
+    void gerarLinhaDoTempo();
+
+    void atualizaVetor();
 
 };
 
