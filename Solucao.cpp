@@ -209,5 +209,9 @@ void Solucao::atualizaVetor() {
     }
 }
 
+int Solucao::getCusto() const {
+    return this->custo;
+}
+
 
 

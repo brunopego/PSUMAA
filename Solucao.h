@@ -41,6 +41,8 @@ public:
 
     void atualizaVetor();
 
+    int getCusto() const;
+
 };
 
 
