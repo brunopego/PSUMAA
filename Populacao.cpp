@@ -26,7 +26,12 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     pair<unordered_set<Solucao, HashSolucao>::iterator,bool> par;
 
     int i = 0;
-    while(i < mi){
+    // adiciona um individuo construido de forma gulosa
+    Solucao s(prob);
+    s.ordena(0, tipo);
+    populacao.insert(s);
+
+    while(i < (mi-1)){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
         par = populacao.insert(sol);
