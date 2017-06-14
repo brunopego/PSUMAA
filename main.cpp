@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <ctime>
+#include <chrono>
 
 #include "Problema.h"
 #include "Solucao.h"
@@ -8,17 +9,11 @@
 
 
 using namespace std;
-/*
-float gerarAlfa(){
-    // gera numero aleatorio entre 0 e 1
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_real_distribution<> dis(0,1);
-    return (float) dis(gen);
-}
- */
+using namespace std::chrono;
 
 int main() {
+
+    high_resolution_clock::time_point t1 = high_resolution_clock::now();
 
     // Alfa =  0 -> Guloso, 1 -> totalmente aleatorio
 
@@ -29,8 +24,11 @@ int main() {
     //Problema p("instancias/dados/INST7501.dat");
     Problema p("instancias/dados/INST1001.dat");
 
-    //Populacao pop(300,0,1,&p);
+    Populacao pop(100,0,1,&p);
     //pop.imprimePopulacao();
 
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    auto duracao = duration_cast<milliseconds>( t2 - t1 ).count();
+    cout << duracao << " milisegundos" << endl;
     return 0;
 }
