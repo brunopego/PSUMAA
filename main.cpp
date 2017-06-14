@@ -20,6 +20,8 @@ float gerarAlfa(){
 
 int main() {
 
+    // Alfa =  0 -> Guloso, 1 -> totalmente aleatorio
+
     // semente para a funcao rand() para gerar um valor aleatorio
     srand(time(NULL));
 
@@ -27,7 +29,7 @@ int main() {
     //Problema p("instancias/dados/INST7501.dat");
     Problema p("instancias/dados/INST1001.dat");
 
-    Populacao pop(300,0,1,&p);
+    //Populacao pop(300,0,1,&p);
     //pop.imprimePopulacao();
 
     return 0;
