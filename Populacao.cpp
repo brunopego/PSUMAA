@@ -10,6 +10,10 @@ float gerarAlfa(){
     return (float) dis(gen);
 }
 
+bool ordernaPorCusto(const Solucao& a, const Solucao& b){
+    return (a.getCusto() < b.getCusto());
+}
+
 Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
 
     this->mi = mi; // numero de pais selecionados
@@ -30,17 +34,18 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     Solucao s(prob);
     s.ordena(0, tipo);
     s.gerarLinhaDoTempo();
-    populacao.insert(s);
+    populacao_set.insert(s);
 
     while(i < (mi-1)){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
-        par = populacao.insert(sol);
+        par = populacao_set.insert(sol);
         if(par.second) i++;
     }
 
-    for(auto sol : populacao){
+    for(auto sol : populacao_set){
         sol.gerarLinhaDoTempo();
+        populacao.push_back(sol);
     }
 
 }
@@ -61,8 +66,17 @@ void Populacao::imprimePopulacao() {
 
 void Populacao::insereIndividuo(Solucao &solucao) {
 
+    // TODO: Corrigir essa funcao para inserir na lista populacao
     pair<unordered_set<Solucao, HashSolucao>::iterator,bool> p;
-    p = populacao.insert(solucao);
+    p = populacao_set.insert(solucao);
     if(!p.second) cout << "O individuo ja esta nesta populacao";
 
+}
+
+list <Solucao> &Populacao::getPopulacao() {
+    return populacao;
+}
+
+void Populacao::ordernarPopulacao() {
+    populacao.sort(ordernaPorCusto);
 }

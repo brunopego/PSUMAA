@@ -2,6 +2,7 @@
 #define PSUMAA_POPULACAO_H
 
 #include <vector>
+#include <list>
 #include <unordered_set>
 #include <string>
 #include <iostream>
@@ -25,7 +26,8 @@ struct HashSolucao {
 class Populacao {
 
 private:
-    unordered_set<Solucao, HashSolucao> populacao;
+    unordered_set<Solucao, HashSolucao> populacao_set;
+    list<Solucao> populacao;
     Problema *prob; // referencia para o problema
     int mi; // numero de pais selecionados
     int lambda; // numero de filhos gerados
@@ -43,7 +45,9 @@ public:
 
     void insereIndividuo(Solucao& solucao);
 
-    //unordered_set& getPopulacao();
+    list<Solucao> &getPopulacao();
+
+    void ordernarPopulacao();
 
     void imprimePopulacao();
 
