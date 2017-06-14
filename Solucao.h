@@ -15,6 +15,7 @@ private:
     vector<Job> jobs; // vetor com os dados de cada tarefa do problema
     list<Job> lista_jobs; // lista com os dados do problema apos ordenacao
     Problema *prob; // referencia para o problema
+    int custo = 0; // custo da solucao, calculado apos a linha do tempo ser gerada
     //int qtd_tarefas; // quantidade de jobs/tarefas
 
 public:
@@ -24,23 +25,13 @@ public:
 
     list<Job> &getListaJobs();
 
-    int getCusto() const;
+    int calculaCusto();
 
     int getAntecipacao(const Job& job) const;
 
     int getAtraso(const Job& job) const;
 
-    // Metodo guloso Data de Entrega mais Próxima - EDD (Earliest Due Date)
-    void eddGuloso();
-
-    // Metodo parcialmente guloso Data de Entrega mais Próxima - EDD (Earliest Due Date)
     void ordena(float alfa, int tipo);
-
-    // Metodo guloso Data de Entrega mais Distante - TDD (Tardiest Due Date)
-    void tddGuloso();
-
-    // Metodo guloso Menor Tempo de Processamento - SPT (Shortest Processing Time)
-    void sptGuloso();
 
     void imprimeSolucao();
 

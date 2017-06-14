@@ -71,33 +71,17 @@ int Solucao::getAtraso(const Job& job) const {
     return 0;
 }
 
-int Solucao::getCusto() const {
+int Solucao::calculaCusto() {
     int total = 0;
-    for(auto job : jobs){
+    for(auto job : lista_jobs){
         int job_alfa = job.t->getAlfa();
         int job_beta = job.t->getBeta();
         int job_antecipacao = getAntecipacao(job);
         int job_atraso = getAtraso(job);
         total += (job_alfa * job_antecipacao) + (job_beta * job_atraso);
-        //std::cout << "job_alfa " << job_alfa << std::endl;
-        //std::cout << "job_beta " << job_beta << std::endl;
-        //std::cout << "job_antecipacao " << job_antecipacao << std::endl;
-        //std::cout << "job_atraso " << job_atraso << std::endl << std::endl;
     }
+    this->custo = total;
     return total;
-}
-
-void Solucao::eddGuloso() {
-    sort(jobs.begin(), jobs.end(), edd_funcao);
-    //list.sort(edd_funcao)
-}
-
-void Solucao::tddGuloso() {
-    sort(jobs.begin(), jobs.end(), tdd_funcao);
-}
-
-void Solucao::sptGuloso() {
-    sort(jobs.begin(), jobs.end(), spt_funcao);
 }
 
 void Solucao::ordena(float alfa, int tipo) {
@@ -112,7 +96,7 @@ void Solucao::ordena(float alfa, int tipo) {
     int tamLista;
     int tamLrc;
     int posicaoAleatoria;
-    vector<Job> jobsOrdena; // Vetor auxiliar
+    //vector<Job> jobsOrdena; // Vetor auxiliar
 
     if (tipo == 1) {
         //ordenacao edd
@@ -133,15 +117,15 @@ void Solucao::ordena(float alfa, int tipo) {
 
 
     while(!jobs.empty()){
-        tamLista  = jobs.size();
+        tamLista  = (int) jobs.size();
         tamLrc =  max(1, (int) (alfa * tamLista));
         //cout << "Tam LRC: " << tamLrc << endl;
         posicaoAleatoria = geraPosicaoAleatoria(tamLrc);
-        jobsOrdena.push_back(jobs[posicaoAleatoria]);
+        lista_jobs.push_back(jobs[posicaoAleatoria]);
         jobs.erase(jobs.begin() + posicaoAleatoria);
     }
 
-    for(auto job : jobsOrdena){
+    for(auto job : lista_jobs){
         jobs.push_back(job);
     }
 
@@ -154,7 +138,7 @@ void Solucao::imprimeSolucao() {
     cout << "=======================SOLUCAO=======================" << endl << endl;
     cout << "Problema: " << (*prob).getNome_arq() << endl;
     cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
-    cout << "Custo: " << getCusto() << endl;
+    cout << "Custo: " << calculaCusto() << endl;
     cout << endl;
 
     cout << setw(6) << "Job"; // id do job
@@ -165,6 +149,12 @@ void Solucao::imprimeSolucao() {
     cout << setw(8) << "H2[i]"; // tempo atrasado
     cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
     cout << endl;
+
+    // limpa o vetor e preenche novamente atualizado, pois a lista_jobs pode ter sofrido alteracoes
+    jobs.clear();
+    for(auto job : lista_jobs){
+        jobs.push_back(job);
+    }
 
     for (int i = 0; i < jobs.size(); i++){
         cout << setw(6) << jobs[i].getId();
