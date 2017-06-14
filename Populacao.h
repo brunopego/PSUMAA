@@ -41,7 +41,7 @@ public:
 
     Populacao(int mi, int lambda, int tipo, Problema* prob);
 
-    void insere(Solucao& solucao);
+    void insereIndividuo(Solucao& solucao);
 
     //unordered_set& getPopulacao();
 

@@ -10,14 +10,6 @@ float gerarAlfa(){
     return (float) dis(gen);
 }
 
-void Populacao::insere(Solucao &solucao) {
-
-    pair<unordered_set<Solucao, HashSolucao>::iterator,bool> p;
-    p = populacao.insert(solucao);
-    if(p.second == false) cout << "Nao inseriu";
-
-}
-
 Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
 
     this->mi = mi; // numero de pais selecionados
@@ -34,11 +26,11 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     pair<unordered_set<Solucao, HashSolucao>::iterator,bool> par;
 
     int i = 0;
-    while(i < lambda){
+    while(i < mi){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
         par = populacao.insert(sol);
-        if(par.second == true) i++;
+        if(par.second) i++;
     }
 
 }
@@ -54,5 +46,13 @@ void Populacao::imprimePopulacao() {
     for(auto sol : populacao){
         sol.imprimeSolucao();
     }
+
+}
+
+void Populacao::insereIndividuo(Solucao &solucao) {
+
+    pair<unordered_set<Solucao, HashSolucao>::iterator,bool> p;
+    p = populacao.insert(solucao);
+    if(!p.second) cout << "O individuo ja esta nesta populacao";
 
 }
