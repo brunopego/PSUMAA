@@ -189,8 +189,6 @@ void Solucao::gerarLinhaDoTempo() {
         jobs[i].setInicio(tempo_inicio);
         if (i != jobs.size() - 1) {
             tempo_inicio += jobs[i].t->getTp() + (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId()) + 1;
-        } else {
-            tempo_inicio += jobs[i].t->getTp();
         }
     }
 
@@ -199,7 +197,7 @@ void Solucao::gerarLinhaDoTempo() {
         lista_jobs.push_back(job);
     }
 
-    calculaCusto(); 
+    calculaCusto();
 
 }
 
