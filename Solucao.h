@@ -43,6 +43,8 @@ public:
 
     int getCusto() const;
 
+    void fazerMutacao(int tipo);
+
 };
 
 

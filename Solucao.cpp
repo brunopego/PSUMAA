@@ -130,7 +130,7 @@ void Solucao::ordena(float alfa, int tipo) {
     }
 
 }
-
+/*
 void Solucao::imprimeSolucao() {
 
     cout << left;
@@ -164,6 +164,49 @@ void Solucao::imprimeSolucao() {
         cout << setw(8) << jobs[i].t->getAlfa() * getAntecipacao(jobs[i]);
         cout << setw(8) << getAtraso(jobs[i]);
         cout << setw(8) << jobs[i].t->getBeta() * getAtraso(jobs[i]);
+        cout << endl;
+    }
+
+    cout << endl;
+    cout << "=====================================================" << endl;
+
+}
+*/
+
+void Solucao::imprimeSolucao() {
+
+    list<Job>::iterator it;
+
+    cout << left;
+    cout << endl;
+    cout << "=======================SOLUCAO=======================" << endl << endl;
+    cout << "Problema: " << (*prob).getNome_arq() << endl;
+    cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
+    cout << "Custo: " << calculaCusto() << endl;
+    cout << endl;
+
+    cout << setw(6) << "Job"; // id do job
+    cout << setw(8) << "TP[i]"; // tempo de processamento
+    cout << setw(8) << "S[i][j]"; // tempo de setup
+    cout << setw(8) << "H1[i]"; // tempo adiantado
+    cout << setw(8) << "C1[i]"; // valor da penalidade por antecipacao
+    cout << setw(8) << "H2[i]"; // tempo atrasado
+    cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
+    cout << endl;
+
+    for (it = lista_jobs.begin(); it != lista_jobs.end(); it++){
+        cout << setw(6) << (*it).getId();
+        cout << setw(8) << (*it).t->getTp();
+        if ((*it).getId() != lista_jobs.back().getId()) {
+            cout << setw(8) << (*prob).getTempoSetup((*it).getId(), (*(it++)).getId());
+            it--;
+        } else {
+            cout << setw(8) << 0;
+        }
+        cout << setw(8) << getAntecipacao((*it));
+        cout << setw(8) << (*it).t->getAlfa() * getAntecipacao((*it));
+        cout << setw(8) << getAtraso((*it));
+        cout << setw(8) << (*it).t->getBeta() * getAtraso((*it));
         cout << endl;
     }
 
@@ -211,6 +254,21 @@ void Solucao::atualizaVetor() {
 
 int Solucao::getCusto() const {
     return this->custo;
+}
+
+void Solucao::fazerMutacao(int tipo) {
+
+    /*
+     * Tipo 1: mover u depois de v
+     * Tipo 2: mover (u,x) depois de v
+     * Tipo 3: mover (x,u) depois de v
+     * Tipo 4: trocar u com v
+     * Tipo 5: trocar (u,x) com v
+     * Tipo 6: trocar (u,x) com (v,y)
+     */
+
+
+
 }
 
 
