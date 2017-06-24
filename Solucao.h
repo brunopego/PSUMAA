@@ -45,6 +45,8 @@ public:
 
     void fazerMutacao(int tipo);
 
+    Solucao& operator=(Solucao& sol);
+
 };
 
 

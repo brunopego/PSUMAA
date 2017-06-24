@@ -381,5 +381,18 @@ void Solucao::fazerMutacao(int tipo) {
 
 }
 
+Solucao &Solucao::operator=(Solucao& sol) {
+    if(this == &sol) return *this;
+
+    for(auto s : sol.lista_jobs){
+        this->lista_jobs.push_back(s);
+    }
+    this->atualizaVetor();
+    this->prob = sol.prob;
+    this->custo = sol.custo;
+
+    return *this;
+}
+
 
 
