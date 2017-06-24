@@ -30,6 +30,10 @@ int geraPosicaoAleatoria(int tamLrc){
     return rand() % tamLrc;
 }
 
+int geraPosicaoAleatoria(int min, int max){
+    return rand() % (max - min + 1) + min;
+}
+
 /*
  * Funcoes da Classe
  */
@@ -267,6 +271,112 @@ void Solucao::fazerMutacao(int tipo) {
      * Tipo 6: trocar (u,x) com (v,y)
      */
 
+    int m, n; // numero aleatorio
+    list<Job>::iterator u,v; // iteradores auxiliares
+    list<Job>::iterator x,y; // iterado auxiliar que vem antes ou depois de u
+
+    if(tipo == 1){
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size());
+            n = geraPosicaoAleatoria((int) lista_jobs.size());
+        } while(m == n);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u);
+
+
+    } else if(tipo == 2){
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
+            n = geraPosicaoAleatoria((int) lista_jobs.size());
+        } while(m == n || m == n + 1);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 2); // intervalo aberto
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u, x);
+
+    } else if(tipo == 3){
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size());
+            if(m == 0) m = 1;
+            n = geraPosicaoAleatoria((int) lista_jobs.size());
+        } while(m == n || m == n - 1);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+
+        advance(u, m);
+        advance(x, m - 1);
+        swap(*x, *u);
+
+        u = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m + 1); // intervalo aberto
+        advance(x, m - 1);
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, x, u);
+
+    } else if(tipo == 4){
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size());
+            n = geraPosicaoAleatoria((int) lista_jobs.size());
+        } while(m == n);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n);
+        swap(*u, *v);
+
+    } else if(tipo == 5){
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
+            n = geraPosicaoAleatoria((int) lista_jobs.size());
+        } while(m == n || m == n + 1);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 1);
+        advance(v, n);
+        swap(*u, *v);
+        u = lista_jobs.begin();
+        advance(u, n + 1);
+        lista_jobs.splice(u, lista_jobs, x);
+
+    } else {
+
+        do {
+            m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
+            n = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
+        } while(m == n || m == n + 1);
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        y = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 1);
+        advance(v, n);
+        advance(y, n + 1);
+        swap(*u, *v);
+        swap(*x, *y);
+
+    }
 
 
 }
