@@ -17,7 +17,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/PSUMAA" afterPath="$PROJECT_DIR$/cmake-build-debug/PSUMAA" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PSUMAA.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Populacao.cpp" afterPath="$PROJECT_DIR$/Populacao.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Populacao.h" afterPath="$PROJECT_DIR$/Populacao.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solucao.cpp" afterPath="$PROJECT_DIR$/Solucao.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -37,8 +39,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            <state relative-caret-position="272">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -46,30 +48,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solucao.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Populacao.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Populacao.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Populacao.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Populacao.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding>
+                <element signature="e#55#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solucao.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solucao.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="323" column="31" lean-forward="true" selection-start-line="323" selection-start-column="31" selection-end-line="323" selection-end-column="31" />
+            <state relative-caret-position="267">
+              <caret line="308" column="44" lean-forward="false" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
               <folding>
                 <element signature="e#162#186#0" expanded="false" />
                 <element signature="e#162#275#0" expanded="false" />
                 <element signature="e#277#364#0" expanded="false" />
                 <element signature="e#366#455#0" expanded="false" />
-                <element signature="e#682#709#0" expanded="false" />
-                <element signature="e#902#954#0" expanded="false" />
-                <element signature="e#956#1018#0" expanded="false" />
-                <element signature="e#1020#1213#0" expanded="false" />
-                <element signature="e#1215#1404#0" expanded="false" />
-                <element signature="e#1406#1784#0" expanded="false" />
-                <element signature="e#1835#1987#0" expanded="false" />
-                <element signature="e#2930#4409#0" expanded="false" />
-                <element signature="e#2930#5935#0" expanded="false" />
-                <element signature="e#5937#6189#0" expanded="false" />
-                <element signature="e#6191#6637#0" expanded="false" />
-                <element signature="e#6639#6857#0" expanded="false" />
-                <element signature="e#6859#6916#0" expanded="false" />
-                <marker date="1498344885507" expanded="false" signature="2964:4406" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,8 +88,8 @@
       <file leaf-file-name="Solucao.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solucao.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="799">
+              <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
               <folding>
                 <element signature="e#52#68#0" expanded="true" />
               </folding>
@@ -116,8 +126,8 @@
         <option value="$PROJECT_DIR$/Populacao.h" />
         <option value="$PROJECT_DIR$/Populacao.cpp" />
         <option value="$PROJECT_DIR$/Solucao.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Solucao.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -433,7 +443,8 @@
       <workItem from="1497464004488" duration="4373000" />
       <workItem from="1497633777024" duration="4200000" />
       <workItem from="1498153313548" duration="3505000" />
-      <workItem from="1498244522241" duration="8160000" />
+      <workItem from="1498244522241" duration="10862000" />
+      <workItem from="1498350456422" duration="2036000" />
     </task>
     <task id="LOCAL-00001" summary="Inicia Projeto">
       <created>1489639245577</created>
@@ -509,7 +520,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157263000" />
+    <option name="totallyTimeSpent" value="162001000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,16 +535,16 @@
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21212122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21515152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28109854" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57350564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.50558454" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5912762" sideWeight="0.4944155" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7576737" sideWeight="0.4944155" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3974152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42972535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -600,20 +611,6 @@
             <element signature="e#162#275#0" expanded="false" />
             <element signature="e#277#364#0" expanded="false" />
             <element signature="e#366#455#0" expanded="false" />
-            <element signature="e#682#709#0" expanded="false" />
-            <element signature="e#902#954#0" expanded="false" />
-            <element signature="e#956#1018#0" expanded="false" />
-            <element signature="e#1020#1213#0" expanded="false" />
-            <element signature="e#1215#1404#0" expanded="false" />
-            <element signature="e#1406#1784#0" expanded="false" />
-            <element signature="e#1835#1987#0" expanded="false" />
-            <element signature="e#2930#4409#0" expanded="false" />
-            <element signature="e#2930#5935#0" expanded="false" />
-            <element signature="e#5937#6189#0" expanded="false" />
-            <element signature="e#6191#6637#0" expanded="false" />
-            <element signature="e#6639#6857#0" expanded="false" />
-            <element signature="e#6859#6916#0" expanded="false" />
-            <marker date="1498344885507" expanded="false" signature="2964:4406" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -936,21 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Populacao.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding>
-            <element signature="e#55#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tarefa.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="88" column="1" lean-forward="false" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,60 +965,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Populacao.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#22#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Solucao.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="799">
+          <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
           <folding>
             <element signature="e#52#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/Populacao.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="369">
+          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#55#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Solucao.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="323" column="31" lean-forward="true" selection-start-line="323" selection-start-column="31" selection-end-line="323" selection-end-column="31" />
+        <state relative-caret-position="267">
+          <caret line="308" column="44" lean-forward="false" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
           <folding>
             <element signature="e#162#186#0" expanded="false" />
             <element signature="e#162#275#0" expanded="false" />
             <element signature="e#277#364#0" expanded="false" />
             <element signature="e#366#455#0" expanded="false" />
-            <element signature="e#682#709#0" expanded="false" />
-            <element signature="e#902#954#0" expanded="false" />
-            <element signature="e#956#1018#0" expanded="false" />
-            <element signature="e#1020#1213#0" expanded="false" />
-            <element signature="e#1215#1404#0" expanded="false" />
-            <element signature="e#1406#1784#0" expanded="false" />
-            <element signature="e#1835#1987#0" expanded="false" />
-            <element signature="e#2930#4409#0" expanded="false" />
-            <element signature="e#2930#5935#0" expanded="false" />
-            <element signature="e#5937#6189#0" expanded="false" />
-            <element signature="e#6191#6637#0" expanded="false" />
-            <element signature="e#6639#6857#0" expanded="false" />
-            <element signature="e#6859#6916#0" expanded="false" />
-            <marker date="1498344885507" expanded="false" signature="2964:4406" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Populacao.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
