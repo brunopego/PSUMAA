@@ -14,6 +14,10 @@ bool ordernaPorCusto(const Solucao& a, const Solucao& b){
     return (a.getCusto() < b.getCusto());
 }
 
+int geraTipoMutacao(int num){
+    return (rand() % num) + 1;
+}
+
 Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
 
     this->mi = mi; // numero de pais selecionados
@@ -36,7 +40,7 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob) {
     s.gerarLinhaDoTempo();
     populacao_set.insert(s);
 
-    while(i < (mi-1)){
+    while(i < (lambda-1)){
         Solucao sol(prob);
         sol.ordena(gerarAlfa(), tipo);
         par = populacao_set.insert(sol);
@@ -79,4 +83,29 @@ list <Solucao> &Populacao::getPopulacao() {
 
 void Populacao::ordernarPopulacao() {
     populacao.sort(ordernaPorCusto);
+}
+
+void Populacao::estrategiaEvolutiva() {
+
+    int qtd_filhos = lambda/mi;
+    int tipo_mutacao;
+    Solucao s(prob);
+
+
+    for(int i = 0; i < 1; i++){
+
+        for(auto individuo: populacao){
+            for(int i = 0; i < qtd_filhos; i++){
+                tipo_mutacao = geraTipoMutacao(6);
+                s = individuo;
+                s.fazerMutacao(tipo_mutacao);
+                s.gerarLinhaDoTempo();
+                populacao.push_back(s);
+            }
+        }
+
+    }
+
+    ordernarPopulacao();
+
 }

@@ -51,6 +51,8 @@ public:
 
     void imprimePopulacao();
 
+    void estrategiaEvolutiva();
+
 
 };
 
