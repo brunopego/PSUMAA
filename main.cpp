@@ -24,7 +24,9 @@ int main() {
     //Problema p("instancias/dados/INST7501.dat");
     Problema p("instancias/dados/INST1001.dat");
 
-    //Populacao pop(300,0,1,&p);
+    //Populacao pop(2,4,1,&p);
+    //pop.estrategiaEvolutiva();
+    //cout << "Tamanho da populacao: " << pop.getPopulacao().size() << endl;
 
     //pop.ordernarPopulacao();
 
@@ -39,10 +41,17 @@ int main() {
     //pop.imprimePopulacao();
 
 
+
     Solucao s(&p);
     s.ordena(0,1);
     s.gerarLinhaDoTempo();
-    s.fazerMutacao(3);
+
+    // muta um individuo 100x
+    for(int i = 1; i < 11; i++){
+        cout << "i -> " << i << endl;
+        s.fazerMutacao(3);
+    }
+
     s.gerarLinhaDoTempo();
     s.imprimeSolucao();
 
