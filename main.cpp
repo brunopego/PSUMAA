@@ -22,9 +22,12 @@ int main() {
 
     //Problema p("instancias/dados/INST0703.dat");
     //Problema p("instancias/dados/INST7501.dat");
-    Problema p("instancias/dados/INST1001.dat");
+    Problema p("instancias/dados/INST5001.dat");
+    //Problema p("instancias/dados/INST2002.dat");
+    //Problema p("instancias/dados/INST2004.dat");
+    //Problema p("instancias/dados/INST1001.dat");
 
-    Populacao pop(2,50,1,&p);
+    Populacao pop(4,100,1,&p);
     pop.estrategiaEvolutiva();
     //cout << "Tamanho da populacao: " << pop.getPopulacao().size() << endl;
 
@@ -37,6 +40,7 @@ int main() {
     }
     */
     //cout << "Custo: " << pop.getPopulacao().front().getCusto() << endl;
+    //cout << "Tamanho da populacao: " << pop.getPopulacao().size() << endl;
     pop.getPopulacao().front().imprimeSolucao();
     //pop.imprimePopulacao();
 
