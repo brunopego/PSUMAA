@@ -30,10 +30,6 @@ int geraPosicaoAleatoria(int tamLrc){
     return rand() % tamLrc;
 }
 
-int geraPosicaoAleatoria(int min, int max){
-    return rand() % (max - min + 1) + min;
-}
-
 /*
  * Funcoes da Classe
  */
@@ -310,7 +306,7 @@ void Solucao::fazerMutacao(int tipo) {
             m = geraPosicaoAleatoria((int) lista_jobs.size());
             if(m == 0) m = 1;
             n = geraPosicaoAleatoria((int) lista_jobs.size());
-        } while(m == n || m == n - 1);
+        } while(m == n || n == m - 1 || n + 1 == m - 1);
 
         u = lista_jobs.begin();
         v = lista_jobs.begin();
