@@ -89,23 +89,28 @@ void Populacao::estrategiaEvolutiva() {
 
     int qtd_filhos = lambda/mi;
     int tipo_mutacao;
-    Solucao s(prob);
+    list<Solucao> aux; // vetor auxiliar de populacao
 
 
-    for(int i = 0; i < 1; i++){
+    for(int i = 0; i < 3; i++){
 
         for(auto individuo: populacao){
             for(int i = 0; i < qtd_filhos; i++){
                 tipo_mutacao = geraTipoMutacao(6);
+                //cout << "Tipo de mutação: " << tipo_mutacao << endl;
+                Solucao s(prob);
                 s = individuo;
                 s.fazerMutacao(tipo_mutacao);
                 s.gerarLinhaDoTempo();
-                populacao.push_back(s);
+                aux.push_back(s);
             }
         }
 
+        populacao.splice(populacao.end(), aux);
+        ordernarPopulacao();
+        //populacao.resize(10);
     }
 
-    ordernarPopulacao();
+
 
 }
