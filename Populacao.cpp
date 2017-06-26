@@ -108,7 +108,10 @@ void Populacao::estrategiaEvolutiva() {
 
         populacao.splice(populacao.end(), aux);
         ordernarPopulacao();
-        //populacao.resize(10);
+        cout << "Tamanho da populacao: " << populacao.size() << endl;
+        //int tam = (int) (0.15 * populacao.size());
+        //cout << "Tamanho do corte: " << tam << endl;
+        populacao.resize(20, Solucao(prob));
     }
 
 
