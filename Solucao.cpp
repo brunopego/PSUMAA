@@ -179,13 +179,14 @@ void Solucao::imprimeSolucao() {
 
     cout << left;
     cout << endl;
-    cout << "=======================SOLUCAO=======================" << endl << endl;
+    cout << "==========================SOLUCAO==========================" << endl << endl;
     cout << "Problema: " << (*prob).getNome_arq() << endl;
     cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
     cout << "Custo: " << calculaCusto() << endl;
     cout << endl;
 
     cout << setw(6) << "Job"; // id do job
+    cout << setw(8) << "TI[i]"; // tempo de inicio
     cout << setw(8) << "TP[i]"; // tempo de processamento
     cout << setw(8) << "S[i][j]"; // tempo de setup
     cout << setw(8) << "H1[i]"; // tempo adiantado
@@ -196,6 +197,7 @@ void Solucao::imprimeSolucao() {
 
     for (it = lista_jobs.begin(); it != lista_jobs.end(); it++){
         cout << setw(6) << (*it).getId();
+        cout << setw(8) << (*it).getInicio();
         cout << setw(8) << (*it).t->getTp();
         if ((*it).getId() != lista_jobs.back().getId()) {
             cout << setw(8) << (*prob).getTempoSetup((*it).getId(), (*(it++)).getId());
@@ -211,7 +213,7 @@ void Solucao::imprimeSolucao() {
     }
 
     cout << endl;
-    cout << "=====================================================" << endl;
+    cout << "===========================================================" << endl;
 
 }
 
