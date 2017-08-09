@@ -27,7 +27,7 @@ class Populacao {
 
 private:
     unordered_set<Solucao, HashSolucao> populacao_set;
-    list<Solucao> populacao;
+    vector<Solucao> populacao;
     Problema *prob; // referencia para o problema
     int mi; // numero de pais selecionados
     int lambda; // numero de filhos gerados
@@ -37,21 +37,44 @@ private:
      * tipo 3 = spt
      * tipo >3 = aleatorio
      */
-    int tipo;
+    int tipo; // tipo usado na construcao da solucao
+
+    /*
+     * tipo 1 = merms e merm e vnd
+     * tipo 2 = merm e vnd
+     * tipo 3 = vnd
+     */
+    int tipoEstrategia;
+    int pctgVnd;
+    int pctgMut;
+    int qtdEvolucao;
+
 
 public:
 
-    Populacao(int mi, int lambda, int tipo, Problema* prob);
+    Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvolucao, int tipoEstrategia, int pctgVnd, int pctgMut);
 
-    void insereIndividuo(Solucao& solucao);
-
-    list<Solucao> &getPopulacao();
+    vector<Solucao> &getPopulacao();
 
     void ordernarPopulacao();
 
     void imprimePopulacao();
 
+    void estrategiaEvolutivaParalela();
+
     void estrategiaEvolutiva();
+
+    void setPopulacao(const list<Solucao>& sol, int mi, int lambda, int tipo, Problema* prob);
+
+    void vnd(); // comentado no cpp
+
+    Solucao merms(Solucao sol);
+
+    Solucao merm(Solucao sol);
+
+    Solucao vndPM(Solucao s_atual);
+
+    Solucao ils(Solucao s);
 
 
 };

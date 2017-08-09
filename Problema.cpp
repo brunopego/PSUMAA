@@ -3,12 +3,16 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <cassert>
 
 using namespace std;
 
 Problema::Problema(const string& nome_arq) {
     this->nome_arq = nome_arq;
+
     ifstream reader(nome_arq);
+
+    assert(reader.good());
 
     // le primeira informacao do aquivo que e a qtd de tarefas
     reader >> this->qtd_tarefas;
@@ -23,10 +27,12 @@ Problema::Problema(const string& nome_arq) {
                 this->matriz_ts[i] = new int[this->qtd_tarefas];
             } catch(exception& e){
                 cout << "[2] ERRO AO TENTAR ALOCAR A MATRIZ" << endl;
+                //exit(1);
             }
         }
     } catch(exception& e){
         cout << "[1] ERRO AO TENTAR ALOCAR A MATRIZ" << endl;
+        //exit(1);
     }
 
     // Campos tarefa:

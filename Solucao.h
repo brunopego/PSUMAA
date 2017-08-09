@@ -6,6 +6,7 @@
 #include "Problema.h"
 #include <vector>
 #include <list>
+#include <deque>
 
 using namespace std;
 
@@ -31,7 +32,7 @@ public:
 
     int getAtraso(const Job& job) const;
 
-    void ordena(float alfa, int tipo);
+    void ordena(double alfa, int tipo);
 
     void imprimeSolucao();
 
@@ -45,7 +46,21 @@ public:
 
     void fazerMutacao(int tipo);
 
-    Solucao& operator=(Solucao& sol);
+    void fazerMutacao(int tipo, int m, int n);
+
+    void movimentoVnd(int tipo, int m, int n);
+
+    Solucao& operator=(Solucao sol);
+
+    void moveBloco(int inicio, deque<Job>& bloco);
+
+    int MC(const deque<Job>& bloco);
+
+    int M1(const deque<Job>& bloco);
+
+    int M2(const deque<Job>& bloco);
+
+    void itia(); // Idle time insertion algorithm
 
 };
 

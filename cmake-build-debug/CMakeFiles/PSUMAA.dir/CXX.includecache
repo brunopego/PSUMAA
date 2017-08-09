@@ -17,9 +17,15 @@ Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.cpp
 Populacao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
+Problema.h
+/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 utility
 -
 random
+-
+algorithm
+-
+omp.h
 -
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
@@ -51,6 +57,8 @@ vector
 -
 fstream
 -
+cassert
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
 iostream
@@ -77,6 +85,10 @@ ctime
 -
 iomanip
 -
+cmath
+-
+deque
+-
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 Job.h
@@ -86,6 +98,8 @@ Problema.h
 vector
 -
 list
+-
+deque
 -
 
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
@@ -106,6 +120,10 @@ random
 ctime
 -
 chrono
+-
+cstdlib
+-
+cstring
 -
 Problema.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h

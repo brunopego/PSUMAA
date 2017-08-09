@@ -26,9 +26,13 @@ public:
 
     void setInicio(int inicio);
 
+    int getFim() const;
+
     bool operator==(const Job&  job) const;
 
     bool operator!=(const Job&  job) const;
+
+    Job& operator=(Job job);
 
 };
 

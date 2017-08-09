@@ -1,0 +1,9 @@
+instancias/amostra/INST2501.dat;200;2000;100;1;20;0;24197;165.433
+instancias/amostra/INST2501.dat;200;2000;100;1;20;1;29099;133.573
+instancias/amostra/INST2501.dat;200;2000;100;2;5;0;25784;47.863
+instancias/amostra/INST2501.dat;200;2000;100;2;5;1;24753;47.05
+instancias/amostra/INST2501.dat;200;2000;100;2;20;0;24352;131.619
+instancias/amostra/INST2501.dat;200;2000;100;2;20;1;25916;130.34
+instancias/amostra/INST2501.dat;200;2000;200;1;5;0;25397;102.414
+instancias/amostra/INST2501.dat;200;2000;200;1;5;1;28595;102.783
+instancias/amostra/INST2501.dat;200;2000;200;1;20;0;24197;258.135

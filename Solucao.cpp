@@ -6,6 +6,8 @@
 #include <random>
 #include <ctime>
 #include <iomanip>
+#include <cmath>
+#include <deque>
 
 using namespace std;
 
@@ -84,7 +86,7 @@ int Solucao::calculaCusto() {
     return total;
 }
 
-void Solucao::ordena(float alfa, int tipo) {
+void Solucao::ordena(double alfa, int tipo) {
     /*
      * tipo de ordenacao 1 = EDD
      * tipo de ordenacao 2 = TDD
@@ -233,7 +235,7 @@ void Solucao::gerarLinhaDoTempo() {
     for(int i = 0; i< jobs.size(); i++){
         jobs[i].setInicio(tempo_inicio);
         if (i != jobs.size() - 1) {
-            tempo_inicio += jobs[i].t->getTp() + (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId()) + 1;
+            tempo_inicio += jobs[i].t->getTp() + (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
         }
     }
 
@@ -241,6 +243,7 @@ void Solucao::gerarLinhaDoTempo() {
     for(auto job : jobs){
         lista_jobs.push_back(job);
     }
+
 
     calculaCusto();
 
@@ -278,7 +281,7 @@ void Solucao::fazerMutacao(int tipo) {
         do {
             m = geraPosicaoAleatoria((int) lista_jobs.size());
             n = geraPosicaoAleatoria((int) lista_jobs.size());
-        } while(m == n);
+        } while(n + 1 == m);
 
         u = lista_jobs.begin();
         v = lista_jobs.begin();
@@ -343,7 +346,7 @@ void Solucao::fazerMutacao(int tipo) {
         do {
             m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
             n = geraPosicaoAleatoria((int) lista_jobs.size());
-        } while(m == n || m == n + 1);
+        } while(m == n || m == n + 1 || n == m + 1);
 
         u = lista_jobs.begin();
         v = lista_jobs.begin();
@@ -379,8 +382,140 @@ void Solucao::fazerMutacao(int tipo) {
 
 }
 
-Solucao &Solucao::operator=(Solucao& sol) {
-    if(this == &sol) return *this;
+void Solucao::fazerMutacao(int tipo, int m, int n) {
+
+    /*
+     * Tipo 1: mover u depois de v
+     * Tipo 2: mover (u,x) depois de v
+     * Tipo 3: mover (x,u) depois de v
+     * Tipo 4: trocar u com v
+     * Tipo 5: trocar (u,x) com v
+     * Tipo 6: trocar (u,x) com (v,y)
+     */
+
+    list<Job>::iterator u,v; // iteradores auxiliares
+    list<Job>::iterator x,y; // iterado auxiliar que vem antes ou depois de u
+
+    if(tipo == 1){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u);
+
+
+    } else if(tipo == 2){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 2); // intervalo aberto
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u, x);
+
+    } else if(tipo == 3){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+
+        advance(u, m);
+        advance(x, m - 1);
+        swap(*x, *u);
+
+        u = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m + 1); // intervalo aberto
+        advance(x, m - 1);
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, x, u);
+
+    } else if(tipo == 4){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n);
+        swap(*u, *v);
+
+    } else if(tipo == 5){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 1);
+        advance(v, n);
+        swap(*u, *v);
+        u = lista_jobs.begin();
+        advance(u, n + 1);
+        lista_jobs.splice(u, lista_jobs, x);
+
+    } else {
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        y = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 1);
+        advance(v, n);
+        advance(y, n + 1);
+        swap(*u, *v);
+        swap(*x, *y);
+
+    }
+
+
+}
+
+void Solucao::movimentoVnd(int tipo, int m, int n) {
+    /*
+     * Tipo 1: trocar u com v
+     * Tipo 2: mover u depois de v
+     * Tipo 3: mover (u,x) depois de v
+     */
+
+    list<Job>::iterator u,v; // iteradores auxiliares
+    list<Job>::iterator x,y; // iterado auxiliar que vem antes ou depois de u
+
+    if(tipo == 1){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n);
+        swap(*u, *v);
+
+    } else if(tipo == 2){
+
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        advance(u, m);
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u);
+
+    } else {
+        // tipo 3
+        u = lista_jobs.begin();
+        v = lista_jobs.begin();
+        x = lista_jobs.begin();
+        advance(u, m);
+        advance(x, m + 2); // intervalo aberto
+        advance(v, n + 1);
+        lista_jobs.splice(v, lista_jobs, u, x);
+
+    }
+
+
+}
+
+Solucao& Solucao::operator=(Solucao sol) {
+  //  if(this == &sol) return *this;
+
+    this->lista_jobs.clear();
 
     for(auto s : sol.lista_jobs){
         this->lista_jobs.push_back(s);
@@ -391,6 +526,161 @@ Solucao &Solucao::operator=(Solucao& sol) {
 
     return *this;
 }
+
+void Solucao::moveBloco(int inicio, deque<Job>& bloco) {
+
+    // calculo a data de inicio de todas as tarefas baseado na data de inicio da primeira tarefa do bloco
+    for(int i = 0; i < bloco.size(); i++){
+        if(i == 0) {
+            bloco[i].setInicio(inicio);
+        } else {
+            int setup = this->prob->getTempoSetup(bloco[i-1].getId(), bloco[i].getId());
+            int fimAnterior = bloco[i-1].getFim();
+            //int Panterior = bloco[i-1].t->getTp(); // tempo de processamento do job anterior
+            //int inicioAnterior = bloco[i-1].getInicio();
+            //bloco[i].setInicio(inicioAnterior + Panterior + setup); // TODO: conferir se necessita inicioAnterior
+            bloco[i].setInicio(fimAnterior + setup);
+        }
+    }
+
+}
+
+deque<Job> copiaBloco (deque<Job*> bloco) {
+    deque<Job> novo;
+    for(auto job : bloco){
+        novo.push_back(*job);
+    }
+    return novo;
+}
+
+int Solucao::MC(const deque<Job> &bloco) {
+
+    int mc = 0;
+    for(auto j : bloco){
+        if(j.getFim() < j.t->getE()){
+            mc += (-1) * j.t->getAlfa();
+        }
+
+        if(j.getFim() >= j.t->getT()){
+            mc += j.t->getBeta();
+        }
+    }
+
+    return mc;
+
+}
+
+int Solucao::M1(const deque<Job> &bloco) {
+
+    int m1 = 99999999;
+
+    for(auto b : bloco){
+        if(b.t->getE() <= b.getFim() && b.getFim() < b.t->getT()){
+            int v = b.t->getT() - b.getFim();
+            if(v < m1) m1 = v;
+        }
+    }
+
+    return m1;
+}
+
+int Solucao::M2(const deque<Job> &bloco) {
+
+    int m2 = 99999999;
+
+    for(auto b : bloco){
+        if(b.getFim() < b.t->getE()){
+            int v = b.t->getE() - b.getFim();
+            if(v < m2) m2 = v;
+        }
+    }
+
+    return m2;
+}
+
+void Solucao::itia() {
+
+    //atualizaVetor();
+    deque<Job> sol;
+    for(auto job : lista_jobs){
+        sol.push_back(job);
+    }
+
+    deque<deque<Job*>> blocos;
+
+    int mc = 0; // custo marginal
+    int fi = 0; // unidades a serem deslocadas
+
+    blocos.push_front(deque<Job*>{});
+
+
+    for (int i = int(sol.size() - 1); i >= 0; i--) {
+
+        if(sol[i].getFim() < sol[i].t->getE()){
+            blocos.front().push_front(&sol[i]);
+            //blocos.push_front(deque<Job*>{&sol[i]});
+
+            mc = MC(copiaBloco(blocos.front()));
+
+            while(mc < 0){
+
+                if(blocos.front().back()->getId() != sol[sol.size() - 1].getId()){
+                    int setup = prob->getTempoSetup(sol[i].getId(), sol[i+1].getId());
+                    fi = min(sol[i+1].getFim() - sol[i+1].t->getTp() - setup, min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front()))));
+                } else {
+                    fi = min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front())));
+                }
+
+                // arrasta o bloco fi posicoes
+                blocos.front()[0]->setInicio(blocos.front()[0]->getInicio() + fi);
+                for (int j = 1; j < blocos.front().size(); j++) {
+                    int setup = prob->getTempoSetup(blocos.front()[j-1]->getId(),  blocos.front()[j]->getId());
+                    blocos.front()[j]->setInicio(blocos.front()[j-1]->getFim() + setup);
+                }
+
+                if(blocos.front().back()->getId() != sol[sol.size() - 1].getId()){
+                    // linha 17 pseudo
+                    int setup = this->prob->getTempoSetup(blocos.front().back()->getId(),  blocos[1].front()->getId());
+                    if(blocos.front().back()->getFim() + setup + blocos[1].front()->t->getTp() == blocos[1].front()->getFim()){
+                        // linha 19 pseudo
+                        for (int j = int(blocos.front().size() - 1); j >= 0; j--) {
+                            blocos[1].push_front(blocos.front()[j]);
+                        }
+                        blocos.pop_front();
+                    }
+
+                    // se nao for igual creio que nao precisa juntar os blocos
+                    /*
+                    else {
+                        // linha 21 pseudo
+                        blocos.push_front(deque<Job*>{&sol[i]});
+                    }
+                    */
+
+
+                }
+
+                mc = MC(copiaBloco(blocos.front()));
+
+            }
+
+        } else { // nao consta no pseudo mas creio que precisa adicionar quando nao atende o if para saber quais jobs pertencem ao bloco
+            blocos.front().push_front(&sol[i]);
+        }
+
+    }
+
+    lista_jobs.clear();
+
+    for(auto job: sol){
+        lista_jobs.push_back(job);
+    }
+
+    atualizaVetor();
+
+}
+
+
 
 
 
