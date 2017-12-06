@@ -6,6 +6,9 @@
 #include <unordered_set>
 #include <string>
 #include <iostream>
+#include <ctime>
+#include <chrono>
+#include <cstdlib>
 
 #include "Job.h"
 #include "Solucao.h"
@@ -48,11 +51,12 @@ private:
     int pctgVnd;
     int pctgMut;
     int qtdEvolucao;
+    double start; // tempo em que comecou a execucao
 
 
 public:
 
-    Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvolucao, int tipoEstrategia, int pctgVnd, int pctgMut);
+    Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvolucao, int tipoEstrategia, int pctgVnd, int pctgMut, double start);
 
     vector<Solucao> &getPopulacao();
 
@@ -63,12 +67,6 @@ public:
     void estrategiaEvolutivaParalela();
 
     void estrategiaEvolutiva();
-
-    void setPopulacao(const list<Solucao>& sol, int mi, int lambda, int tipo, Problema* prob);
-
-    void vnd(); // comentado no cpp
-
-    Solucao merms(Solucao sol);
 
     Solucao merm(Solucao sol);
 

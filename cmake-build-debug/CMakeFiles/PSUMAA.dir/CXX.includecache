@@ -39,6 +39,12 @@ string
 -
 iostream
 -
+ctime
+-
+chrono
+-
+cstdlib
+-
 Job.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
 Solucao.h
@@ -131,4 +137,6 @@ Solucao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
 Populacao.h
 /home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
+omp.h
+-
 

@@ -8,6 +8,7 @@
 #include "Problema.h"
 #include "Solucao.h"
 #include "Populacao.h"
+#include <omp.h>
 
 
 using namespace std;
@@ -72,9 +73,7 @@ int main(int argc, char **argv) {
 
         if (strcmp( pName, "nomeArquivo" )==0)
         {
-            //nomeArquivo = pValue;
             nomeArquivo = std::string(pValue);
-            //strcpy(nomeArquivo,pValue);
             continue;
         }
 
@@ -124,15 +123,14 @@ int main(int argc, char **argv) {
 
     }
 
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
+    //high_resolution_clock::time_point t1 = high_resolution_clock::now();
+
+    double start = omp_get_wtime();
 
     // Alfa =  0 -> Guloso, 1 -> totalmente aleatorio
 
     // semente para a funcao rand() para gerar um valor aleatorio
-    //srand(1167405666);
-    time_t semente = time(NULL);
-    srand(semente);
-    //cout << "Semente: " << semente << endl;
+    srand(time(NULL));
 
     //Problema p("instancias/dados/INST0703.dat");
     //Problema p("instancias/dados/INST0801.dat");
@@ -161,7 +159,7 @@ int main(int argc, char **argv) {
     //Populacao pop(50, 3000, 1, &p, 150, 1, 20);
     //Populacao pop(200, 1000, 1, &p, 600, 1, 40, 2);
     lambda *= mi;
-    Populacao pop(mi, lambda, 1, &p, qtdEvolucao, tipoEstrategia, pctgVnd, pctgVnd);
+    Populacao pop(mi, lambda, 1, &p, qtdEvolucao, tipoEstrategia, pctgVnd, pctgVnd, start);
     if(paralelo){
         pop.estrategiaEvolutivaParalela();
     } else{
@@ -191,9 +189,10 @@ int main(int argc, char **argv) {
 
 
     //cout << endl;
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duracao = duration_cast<milliseconds>( t2 - t1 ).count();
-    float segundos = float (duracao)/1000;
+    //high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    //auto duracao = duration_cast<milliseconds>( t2 - t1 ).count();
+    //float segundos = float (duracao)/1000;
+    double segundos = omp_get_wtime() - start;
     cout << segundos << endl;
 
     return 0;

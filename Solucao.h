@@ -46,8 +46,6 @@ public:
 
     void fazerMutacao(int tipo);
 
-    void fazerMutacao(int tipo, int m, int n);
-
     void movimentoVnd(int tipo, int m, int n);
 
     Solucao& operator=(Solucao sol);

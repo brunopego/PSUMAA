@@ -132,48 +132,6 @@ void Solucao::ordena(double alfa, int tipo) {
     }
 
 }
-/*
-void Solucao::imprimeSolucao() {
-
-    cout << left;
-    cout << endl;
-    cout << "=======================SOLUCAO=======================" << endl << endl;
-    cout << "Problema: " << (*prob).getNome_arq() << endl;
-    cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
-    cout << "Custo: " << calculaCusto() << endl;
-    cout << endl;
-
-    cout << setw(6) << "Job"; // id do job
-    cout << setw(8) << "TP[i]"; // tempo de processamento
-    cout << setw(8) << "S[i][j]"; // tempo de setup
-    cout << setw(8) << "H1[i]"; // tempo adiantado
-    cout << setw(8) << "C1[i]"; // valor da penalidade por antecipacao
-    cout << setw(8) << "H2[i]"; // tempo atrasado
-    cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
-    cout << endl;
-
-    atualizaVetor();
-
-    for (int i = 0; i < jobs.size(); i++){
-        cout << setw(6) << jobs[i].getId();
-        cout << setw(8) << jobs[i].t->getTp();
-        if (i != jobs.size() - 1) {
-            cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
-        } else {
-            cout << setw(8) << 0;
-        }
-        cout << setw(8) << getAntecipacao(jobs[i]);
-        cout << setw(8) << jobs[i].t->getAlfa() * getAntecipacao(jobs[i]);
-        cout << setw(8) << getAtraso(jobs[i]);
-        cout << setw(8) << jobs[i].t->getBeta() * getAtraso(jobs[i]);
-        cout << endl;
-    }
-
-    cout << endl;
-    cout << "=====================================================" << endl;
-
-}
-*/
 
 void Solucao::imprimeSolucao() {
 
@@ -295,7 +253,7 @@ void Solucao::fazerMutacao(int tipo) {
         do {
             m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
             n = geraPosicaoAleatoria((int) lista_jobs.size());
-        } while(m == n || m == n + 1);
+        } while(m == n || m == n + 1 || m + 1 == n);
 
         u = lista_jobs.begin();
         v = lista_jobs.begin();
@@ -364,96 +322,7 @@ void Solucao::fazerMutacao(int tipo) {
         do {
             m = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
             n = geraPosicaoAleatoria((int) lista_jobs.size() - 1);
-        } while(m == n || m == n + 1);
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        x = lista_jobs.begin();
-        y = lista_jobs.begin();
-        advance(u, m);
-        advance(x, m + 1);
-        advance(v, n);
-        advance(y, n + 1);
-        swap(*u, *v);
-        swap(*x, *y);
-
-    }
-
-
-}
-
-void Solucao::fazerMutacao(int tipo, int m, int n) {
-
-    /*
-     * Tipo 1: mover u depois de v
-     * Tipo 2: mover (u,x) depois de v
-     * Tipo 3: mover (x,u) depois de v
-     * Tipo 4: trocar u com v
-     * Tipo 5: trocar (u,x) com v
-     * Tipo 6: trocar (u,x) com (v,y)
-     */
-
-    list<Job>::iterator u,v; // iteradores auxiliares
-    list<Job>::iterator x,y; // iterado auxiliar que vem antes ou depois de u
-
-    if(tipo == 1){
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        advance(u, m);
-        advance(v, n + 1);
-        lista_jobs.splice(v, lista_jobs, u);
-
-
-    } else if(tipo == 2){
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        x = lista_jobs.begin();
-        advance(u, m);
-        advance(x, m + 2); // intervalo aberto
-        advance(v, n + 1);
-        lista_jobs.splice(v, lista_jobs, u, x);
-
-    } else if(tipo == 3){
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        x = lista_jobs.begin();
-
-        advance(u, m);
-        advance(x, m - 1);
-        swap(*x, *u);
-
-        u = lista_jobs.begin();
-        x = lista_jobs.begin();
-        advance(u, m + 1); // intervalo aberto
-        advance(x, m - 1);
-        advance(v, n + 1);
-        lista_jobs.splice(v, lista_jobs, x, u);
-
-    } else if(tipo == 4){
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        advance(u, m);
-        advance(v, n);
-        swap(*u, *v);
-
-    } else if(tipo == 5){
-
-        u = lista_jobs.begin();
-        v = lista_jobs.begin();
-        x = lista_jobs.begin();
-        advance(u, m);
-        advance(x, m + 1);
-        advance(v, n);
-        swap(*u, *v);
-        u = lista_jobs.begin();
-        advance(u, n + 1);
-        lista_jobs.splice(u, lista_jobs, x);
-
-    } else {
+        } while(m == n || m == n + 1 || m + 1 == n);
 
         u = lista_jobs.begin();
         v = lista_jobs.begin();

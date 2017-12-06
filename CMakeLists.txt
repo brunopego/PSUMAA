@@ -3,6 +3,7 @@ project(PSUMAA)
 
 set(CMAKE_CXX_STANDARD 11)
 SET( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fopenmp" )
+set(CMAKE_CXX_FLAGS  "-std=c++11 -fopenmp")
 
 set(SOURCE_FILES
         Job.cpp
