@@ -39,9 +39,17 @@ int geraPosicaoAleatoria(int tamLrc){
 Solucao::Solucao(Problema* prob) {
     this->prob = prob;
 
-    for (int i = 1; i <= prob->getQtd_tarefas() ; ++i) {
+    /*for (int i = 1; i <= prob->getQtd_tarefas() ; ++i) {
         this->jobs.push_back(Job(&(prob->getTarefas()[i-1]), i));
+    }*/
+
+    // no for de cima o id eu coloca o i iterado do laco, portanto se a ordem no arquivo
+    // fosse 3,4,1,2.. quando lia o Job que era pra ser id 3 fica como 1 e sucessivamente
+    // o for abaixo corrige isso
+    for (int i = 1; i <= prob->getQtd_tarefas() ; ++i) {
+        this->jobs.push_back(Job(&(prob->getTarefas()[i-1]), prob->getTarefas()[i-1].getId() ));
     }
+
 }
 
 vector<Job> &Solucao::getJobs() {
@@ -177,6 +185,48 @@ void Solucao::imprimeSolucao() {
 
 }
 
+void Solucao::imprimeSolucao2() {
+
+    cout << left;
+    cout << endl;
+    cout << "==========================SOLUCAO==========================" << endl << endl;
+    cout << "Problema: " << (*prob).getNome_arq() << endl;
+    cout << "Numero de Jobs: " << (*prob).getQtd_tarefas() << endl;
+    cout << "Custo: " << calculaCusto() << endl;
+    cout << endl;
+
+    cout << setw(6) << "Job"; // id do job
+    cout << setw(8) << "TI[i]"; // tempo de inicio
+    cout << setw(8) << "TP[i]"; // tempo de processamento
+    cout << setw(8) << "S[i][j]"; // tempo de setup
+    cout << setw(8) << "H1[i]"; // tempo adiantado
+    cout << setw(8) << "C1[i]"; // valor da penalidade por antecipacao
+    cout << setw(8) << "H2[i]"; // tempo atrasado
+    cout << setw(8) << "C2[i]"; // valor da penalidade por atraso
+    cout << endl;
+
+    for(int i = 0; i < jobs.size(); i++) {
+        cout << setw(6) << jobs[i].getId();
+        cout << setw(8) << jobs[i].getInicio();
+        cout << setw(8) << jobs[i].t->getTp();
+        if (i != jobs.size() - 1) {
+            cout << setw(8) << (*prob).getTempoSetup(jobs[i].getId(), jobs[i+1].getId());
+        } else {
+            cout << setw(8) << 0;
+        }
+        cout << setw(8) << getAntecipacao(jobs[i]);
+        cout << setw(8) << jobs[i].t->getAlfa() * getAntecipacao(jobs[i]);
+        cout << setw(8) << getAtraso(jobs[i]);
+        cout << setw(8) << jobs[i].t->getBeta() * getAtraso(jobs[i]);
+        cout << endl;
+
+    }
+
+    cout << endl;
+    cout << "===========================================================" << endl;
+
+}
+
 bool Solucao::operator==(const Solucao &sol) const {
     if (sol.jobs.size() != this->jobs.size()) return false;
     for(unsigned int i = 0; i < sol.jobs.size(); i++)
@@ -186,6 +236,11 @@ bool Solucao::operator==(const Solucao &sol) const {
 }
 
 void Solucao::gerarLinhaDoTempo() {
+
+    /* Esta funcao mantem a lista e o vetor de jobs atualizados,
+     * gerando a linha de tempo de execucao das tarefas
+     * determinando o tempo de inicio e fim de cada tarefa
+     */
 
     atualizaVetor();
     int tempo_inicio = 0;
@@ -209,9 +264,20 @@ void Solucao::gerarLinhaDoTempo() {
 
 void Solucao::atualizaVetor() {
     // limpa o vetor e preenche novamente atualizado, pois a lista_jobs pode ter sofrido alteracoes
+    // como alguma mutacao na solucao que afetou a ordem dos jobs por exemplo
+    // como algumas operacoes sao possiveis somente com vetores ou listas e mantido as duas
+    // estruturas para facilitar o desenvolvimento
     jobs.clear();
     for(auto job : lista_jobs){
         jobs.push_back(job);
+    }
+}
+
+void Solucao::atualizaLista() {
+    /*funcao de teste feita dia 28/07/18 para usar o arquivo de 4 jobs igual o do artigo do ITIA*/
+    lista_jobs.clear();
+    for(auto job : jobs){
+        lista_jobs.push_back(job);
     }
 }
 
@@ -484,23 +550,31 @@ void Solucao::itia() {
 
 
     for (int i = int(sol.size() - 1); i >= 0; i--) {
+        //blocos.push_front(deque<Job*>{}); //inseri agora, equivale ao de cima
+        blocos.front().push_front(&sol[i]); //inseri agora, equivale ao de baixo
 
         if(sol[i].getFim() < sol[i].t->getE()){
-            blocos.front().push_front(&sol[i]);
+            //blocos.front().push_front(&sol[i]); --comentei agora
             //blocos.push_front(deque<Job*>{&sol[i]});
 
             mc = MC(copiaBloco(blocos.front()));
 
             while(mc < 0){
 
+                // linha 12 pseudo -> if last(xi) != xn then
                 if(blocos.front().back()->getId() != sol[sol.size() - 1].getId()){
-                    int setup = prob->getTempoSetup(sol[i].getId(), sol[i+1].getId());
-                    fi = min(sol[i+1].getFim() - sol[i+1].t->getTp() - setup, min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front()))));
+                    //int setup = prob->getTempoSetup(sol[i].getId(), sol[i+1].getId());
+                    int setup = prob->getTempoSetup(blocos.front().back()->getId(), blocos[1].front()->getId());
+                    //fi = min(sol[i+1].getFim() - sol[i+1].t->getTp() - setup, min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front()))));
+                    int m1 = M1(copiaBloco(blocos.front()));
+                    int m2 = M2(copiaBloco(blocos.front()));
+                    int tempo = (blocos[1].front()->getFim() - blocos[1].front()->t->getTp() - setup) - blocos.front().back()->getFim();
+                    fi = min(tempo, min(m1, m2));
                 } else {
                     fi = min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front())));
                 }
 
-                // arrasta o bloco fi posicoes
+                // arrasta o bloco fi posicoes - linha 15 e 16 do pseudo
                 blocos.front()[0]->setInicio(blocos.front()[0]->getInicio() + fi);
                 for (int j = 1; j < blocos.front().size(); j++) {
                     int setup = prob->getTempoSetup(blocos.front()[j-1]->getId(),  blocos.front()[j]->getId());
@@ -519,12 +593,12 @@ void Solucao::itia() {
                     }
 
                     // se nao for igual creio que nao precisa juntar os blocos
-                    /*
-                    else {
+
+                    /*else {
                         // linha 21 pseudo
                         blocos.push_front(deque<Job*>{&sol[i]});
-                    }
-                    */
+                    }*/
+
 
 
                 }
@@ -533,19 +607,27 @@ void Solucao::itia() {
 
             }
 
-        } else { // nao consta no pseudo mas creio que precisa adicionar quando nao atende o if para saber quais jobs pertencem ao bloco
+            blocos.push_front(deque<Job*>{});
+
+        } /*else { // nao consta no pseudo mas creio que precisa adicionar quando nao atende o if para saber quais jobs pertencem ao bloco
             blocos.front().push_front(&sol[i]);
-        }
+            //blocos.push_front(deque<Job*>{});
+        }*/
+
 
     }
 
-    lista_jobs.clear();
+    lista_jobs.clear(); // no itia as operacoes sao feitas com vetor, portanto a lista deve ser atualizada apos o final
 
+    // atualiza lista de jobs com as alteracoes feitas no vetor de jobs
     for(auto job: sol){
         lista_jobs.push_back(job);
     }
 
+    // atualiza o vetor de escopo global, ja que as alteracoes sao feitas num vetor de escopo local
     atualizaVetor();
+
+    calculaCusto(); // apos concluir o itia, chama a funca para calcular o custo e atualizar o valor da variavel de escopo global custo
 
 }
 

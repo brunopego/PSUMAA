@@ -36,11 +36,15 @@ public:
 
     void imprimeSolucao();
 
+    void imprimeSolucao2();
+
     bool operator==(const Solucao&  sol) const;
 
     void gerarLinhaDoTempo();
 
     void atualizaVetor();
+
+    void atualizaLista();
 
     int getCusto() const;
 

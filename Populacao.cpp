@@ -17,6 +17,7 @@ int geraTipoMutacao(int num){
 
 Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvolucao, int tipoEstrategia, int pctgVnd, int pctgMut, double start) {
 
+    // Parametros utilizados
     this->mi = mi; // numero de pais selecionados
     this->lambda = lambda; // numero de filhos gerados
     /*
@@ -48,22 +49,55 @@ Populacao::Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvoluc
     populacao_set.insert(s);
     */
 
-    for(int i = 1; i <= 3; i++){
-        Solucao s(prob);
-        s.ordena(0, i);
-        s.gerarLinhaDoTempo();
-        populacao_set.insert(s);
+    /*
+     * No laco abaixo sao inseridos 3 individuos gerados de forma gulosa,
+     * cada individuo foi gerado com uma heuristica construtiva diferente
+     */
+    /*for(int i = 1; i <= 3; i++){
+        Solucao s(prob); //inicia uma nova solucao (individuo)
+        s.ordena(0, i); // ordena de forma gulosa utilizando 3 heuristicas construtivas
+        s.gerarLinhaDoTempo(); // apos a ordenacao a linha do tempo de execucao e custo sao atualizados
+        populacao_set.insert(s); //insere o individuo na populacao
+    }*/
+
+    for(int i = 1; i <= 1; i++){
+        Solucao s(prob); //inicia uma nova solucao (individuo)
+        s.ordena(0, i); // ordena de forma gulosa utilizando 3 heuristicas construtivas
+        s.gerarLinhaDoTempo(); // apos a ordenacao a linha do tempo de execucao e custo sao atualizados
+        populacao_set.insert(s); //insere o individuo na populacao
     }
 
-    while(i < (mi-3)){
-        Solucao sol(prob);
-        sol.ordena(ALFA(), geraTipoMutacao(4));
-        par = populacao_set.insert(sol);
+    while(i < (mi-1)){
+        Solucao sol(prob); //inicia uma nova solucao (individuo)
+        // a funcao geraTipoMutacao abaixo gera numero aleatorio, exemplo: 4, entao gera 1 ate 4 inclusive.
+        sol.ordena(ALFA(), 1); // ordena o individuo de forma parcialmente gulosa
+        par = populacao_set.insert(sol); //funcao insert insere somente se individuo nao existir na populacao
+        /* if abaixo se true, significa que o individuo foi inserido pois ainda nao existia
+         * entao i++ ate inserir mi-3 individuos e gerar toda populacao inicial
+         */
         if(par.second) i++;
     }
 
+    //while(i < (mi-3)){
+      //  Solucao sol(prob); //inicia uma nova solucao (individuo)
+        // a funcao geraTipoMutacao abaixo gera numero aleatorio, exemplo: 4, entao gera 1 ate 4 inclusive.
+       // sol.ordena(ALFA(), geraTipoMutacao(4)); // ordena o individuo de forma parcialmente gulosa
+       // par = populacao_set.insert(sol); //funcao insert insere somente se individuo nao existir na populacao
+        /* if abaixo se true, significa que o individuo foi inserido pois ainda nao existia
+         * entao i++ ate inserir mi-3 individuos e gerar toda populacao inicial
+         */
+      //  if(par.second) i++;
+   // }
+
+    /*
+     * Apos todos os individuos terem sidos gerados,
+     * a linha do tempo de execucao e o custo de cada individuo sao atualizados
+     * e os individuos que estavam em populacao_set sao passados para o vector populacao
+     * onde as proximas acoes serao executadas na estrategia evolutiva
+     */
     for(auto sol : populacao_set){
         sol.gerarLinhaDoTempo();
+        //sol.itia(); // NOW
         populacao.push_back(sol);
     }
 
@@ -196,7 +230,7 @@ void Populacao::estrategiaEvolutivaParalela() {
 
 void Populacao::estrategiaEvolutiva() {
 
-    int qtd_filhos = lambda/mi; // quatidade de filhos a serem gerados a cada evolucao
+    int qtd_filhos = mi/lambda; // quatidade de filhos a serem gerados a cada evolucao
     int convergencia = 100000000;
     int taxa_convergencia = 0;
 
@@ -210,6 +244,7 @@ void Populacao::estrategiaEvolutiva() {
                 s.fazerMutacao(geraTipoMutacao(6));
 
                 s.gerarLinhaDoTempo();
+                //s.itia(); // NOW
 
                 populacao.push_back(s);
 
@@ -218,9 +253,8 @@ void Populacao::estrategiaEvolutiva() {
 
 
         }
-
+        /*
         if(tipoEstrategia == 1){ // merm e vnd
-
             if(i < 95*qtdEvolucao/100){
 
                 for(int k = 0; k < populacao.size(); k++){
@@ -231,9 +265,9 @@ void Populacao::estrategiaEvolutiva() {
                     }
 
 
-                    /*if(50 >= geraTipoMutacao(100)){
+                    if(50 >= geraTipoMutacao(100)){
                         populacao[k].itia();
-                    }*/
+                    }
 
 
                     if(omp_get_wtime() - start > 1200) break;
@@ -249,9 +283,9 @@ void Populacao::estrategiaEvolutiva() {
                     }
 
 
-                    /*if(50 >= geraTipoMutacao(100)){
+                    if(50 >= geraTipoMutacao(100)){
                         populacao[k].itia();
-                    }*/
+                    }
 
 
                     if(omp_get_wtime() - start > 1200) break;
@@ -260,46 +294,64 @@ void Populacao::estrategiaEvolutiva() {
             }
 
         } else if(tipoEstrategia == 2){ // vnd
-
             for(int k = 0; k < populacao.size(); k++){
 
                 if(pctgVnd >= geraTipoMutacao(100)){
                     populacao[k] = vndPM(populacao[k]);
                     populacao[k].gerarLinhaDoTempo();
+                    //populacao[k].itia();
                 }
 
 
-                /*if(50 >= geraTipoMutacao(100)){
+                if(50 >= geraTipoMutacao(100)){
                     populacao[k].itia();
-                }*/
+                }
 
 
                 if(omp_get_wtime() - start > 1200) break;
 
             }
 
-        }
+        }*/
+
+
+        /*for(int k = 0; k < populacao.size(); k++){
+
+            populacao[k] = merm(populacao[k]);
+            populacao[k].gerarLinhaDoTempo();
+            //populacao[k].itia();
+            if(omp_get_wtime() - start > 1200) break;
+
+        }*/
 
 
 
         ordernarPopulacao();
         //cout << "Tamanho da populacao: " << populacao.size() << endl;
         populacao.resize(mi, Solucao(prob));
-        //cout << "Tamanho depois do corte: " << populacao.size() << endl;
+        cout << "Tamanho depois do corte: " << populacao.size() << endl;
+
+        for(int k = 0; k < populacao.size(); k++){
+            //populacao[k] = vndPM(populacao[k]);
+            populacao[k] = merm(populacao[k]);
+            populacao[k].gerarLinhaDoTempo();
+        }
+        ordernarPopulacao();
 
         if(populacao.front().getCusto() < convergencia){
             convergencia = populacao.front().getCusto();
             taxa_convergencia = 0;
         }
 
-        //cout << endl;
-        //cout << "Numeros de evolucao: " << i+1 << endl;
-        //cout << "Convergencia: " << convergencia << endl;
-        //cout << endl;
+        cout << endl;
+        cout << "Numeros de evolucao: " << i+1 << endl;
+        cout << "Convergencia: " << convergencia << endl;
+        cout << endl;
 
         if(populacao.front().getCusto() == convergencia) taxa_convergencia ++;
 
-        if(taxa_convergencia == 4 * this->prob->getQtd_tarefas()) break; // 4 * n
+        //if(taxa_convergencia == 4 * this->prob->getQtd_tarefas()) break; // 4 * n
+        if(taxa_convergencia == 40) break;
 
         if(omp_get_wtime() - start > 1200) break;
 

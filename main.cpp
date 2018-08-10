@@ -65,11 +65,13 @@ int main(int argc, char **argv) {
         getParamName( pName, argv[i] );
         getParamValue( pValue, argv[i] );
 
+        /*
         if (strcmp( pName, "paralelo" )==0)
         {
             paralelo = atoi(pValue);
             continue;
         }
+         */
 
         if (strcmp( pName, "nomeArquivo" )==0)
         {
@@ -115,11 +117,13 @@ int main(int argc, char **argv) {
             continue;
         }
 
+        /*
         if (strcmp( pName, "pctgMut" )==0)
         {
             pctgMut = atoi(pValue);
             continue;
         }
+         */
 
     }
 
@@ -142,9 +146,9 @@ int main(int argc, char **argv) {
     //Problema p("instancias/dados/INST2501.dat");
     //Problema p("instancias/dados/INST3001.dat");
 
-    string caminho = nomeArquivo;
+    //string caminho = nomeArquivo; comentado aqui
     //Problema p(caminho);
-    Problema p("instancias/dados/" + caminho);
+    //Problema p("instancias/gomesjunior/" + caminho); comentado aqui
 
     //Problema p("instancias/dados/INST5001.dat");
     //Problema p("instancias/dados/INST7501.dat");
@@ -154,38 +158,58 @@ int main(int argc, char **argv) {
 
     //Populacao pop(mi, lambda, tipo, &prob, qtdEvolucao, tipoEstrategia, pctgVnd)
 
-    //Populacao pop(200,5000,1,&p);
     //paralelo = 0;
-    //Populacao pop(50, 3000, 1, &p, 150, 1, 20);
+    //Problema p("instancias/dados/INST1001.dat");
+    //Problema p("instancias/gomesjunior/INST2503.dat");
+    //Populacao pop(200, 10, 1, &p, 600, 1, 20,20, start);
     //Populacao pop(200, 1000, 1, &p, 600, 1, 40, 2);
-    lambda *= mi;
-    Populacao pop(mi, lambda, 1, &p, qtdEvolucao, tipoEstrategia, pctgVnd, pctgVnd, start);
-    if(paralelo){
-        pop.estrategiaEvolutivaParalela();
-    } else{
-        pop.estrategiaEvolutiva();
-    }
+    //lambda *= mi; comentado aqui
+    //Populacao pop(mi, lambda, 1, &p, qtdEvolucao, tipoEstrategia, pctgVnd, pctgVnd, start); comentado aqui
+    //if(paralelo){
+    //    pop.estrategiaEvolutivaParalela();
+    //} else{
+        //pop.estrategiaEvolutiva();
+    //}
 
     //cout << endl;
 
+    //pop.getPopulacao().front().imprimeSolucao2();
+    //cout << endl;
+
+    //pop.getPopulacao().front().itia(); comentado aqui
     //pop.getPopulacao().front().imprimeSolucao();
     //cout << endl;
 
-    pop.getPopulacao().front().itia();
-    //pop.getPopulacao().front().imprimeSolucao();
-    //cout << endl;
+    Problema p("instancias/brunorosa/INSTDT0813.dat");
+    //Problema p("instancias/dados/INST0004.dat");
+    Solucao solu(&p);
+    solu.ordena(0, 1);
+    //solu.atualizaLista(); // necessario para o arquivo 0004 pois nao usa o ordena
+    solu.gerarLinhaDoTempo();
+    // a funcao imprimeSolucao está errada
+    solu.imprimeSolucao2();
+    //cout << "Custo: " << solu.getCusto();
 
-    //cout << "Instancia" << ";" << "Mi" << ";" << "Lambda" << ";" << "N de Evolucoes" << ";" << "Tipo da Estrategia" << ";" << "% VND" << ";" << "% Mutacao"<< ";" << "Paralelo" << endl;
-    cout << nomeArquivo << ";" << mi << ";" << lambda << ";" << qtdEvolucao << ";" << tipoEstrategia << ";" << pctgVnd << ";" << pctgMut << ";" << paralelo << ";";
-    //cout << nomeArquivo << ";" << mi << ";" << lambda << ";" << qtdEvolucao << ";" << tipoEstrategia << ";" << pctgVnd << ";" << paralelo << ";";
+
+    cout << endl;
+    cout << "Após ITIA";
+    cout << endl;
+
+    solu.itia();
+    solu.imprimeSolucao2();
+    //cout << "Custo: " << solu.getCusto();
+    cout << endl;
+    cout << endl;
+
+
+
+    //comentado aqui
+    //cout << nomeArquivo << ";" << mi << ";" << lambda/mi << ";" << qtdEvolucao << ";" << tipoEstrategia << ";" << pctgVnd << ";";
+
 
     // imprime o custo
-    cout << pop.getPopulacao().front().getCusto();
-    cout << ";";
-
-    //cout << endl;
-    //pop.getPopulacao().front().addoip();
-    //pop.getPopulacao().front().imprimeSolucao();
+    //cout << pop.getPopulacao().front().getCusto(); comentado aqui
+    //cout << ";"; comentado aqui
 
 
     //cout << endl;
