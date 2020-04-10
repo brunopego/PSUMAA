@@ -48,15 +48,16 @@ private:
      * tipo 3 = vnd
      */
     int tipoEstrategia;
-    int pctgVnd;
-    int pctgMut;
-    int qtdEvolucao;
+    //int pctgVnd;
+    //int pctgMut;
+    int pctgItia;
+    //int qtdEvolucao;
     double start; // tempo em que comecou a execucao
 
 
 public:
 
-    Populacao(int mi, int lambda, int tipo, Problema* prob, int qtdEvolucao, int tipoEstrategia, int pctgVnd, int pctgMut, double start);
+    Populacao(int mi, int lambda, int tipo, Problema* prob, int tipoEstrategia, int pctgItia, double start);
 
     vector<Solucao> &getPopulacao();
 
@@ -64,16 +65,13 @@ public:
 
     void imprimePopulacao();
 
-    void estrategiaEvolutivaParalela();
+    //void estrategiaEvolutivaParalela();
 
     void estrategiaEvolutiva();
 
     Solucao merm(Solucao sol);
 
     Solucao vndPM(Solucao s_atual);
-
-    Solucao ils(Solucao s);
-
 
 };
 

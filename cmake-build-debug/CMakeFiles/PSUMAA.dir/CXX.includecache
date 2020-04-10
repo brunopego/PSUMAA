@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp
+/Users/bruno/Documents/PSUMAA/Job.cpp
 Job.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+/Users/bruno/Documents/PSUMAA/Job.h
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+/Users/bruno/Documents/PSUMAA/Job.h
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.cpp
+/Users/bruno/Documents/PSUMAA/Populacao.cpp
 Populacao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
+/Users/bruno/Documents/PSUMAA/Populacao.h
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 utility
 -
 random
@@ -28,7 +28,7 @@ algorithm
 omp.h
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
+/Users/bruno/Documents/PSUMAA/Populacao.h
 vector
 -
 list
@@ -46,17 +46,17 @@ chrono
 cstdlib
 -
 Job.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+/Users/bruno/Documents/PSUMAA/Job.h
 Solucao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+/Users/bruno/Documents/PSUMAA/Solucao.h
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp
+/Users/bruno/Documents/PSUMAA/Problema.cpp
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 Tarefa.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+/Users/bruno/Documents/PSUMAA/Tarefa.h
 iostream
 -
 vector
@@ -66,7 +66,7 @@ fstream
 cassert
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 iostream
 -
 vector
@@ -74,15 +74,15 @@ vector
 string
 -
 Tarefa.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+/Users/bruno/Documents/PSUMAA/Tarefa.h
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.cpp
+/Users/bruno/Documents/PSUMAA/Solucao.cpp
 Solucao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+/Users/bruno/Documents/PSUMAA/Solucao.h
 Tarefa.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+/Users/bruno/Documents/PSUMAA/Tarefa.h
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 algorithm
 -
 random
@@ -96,11 +96,11 @@ cmath
 deque
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+/Users/bruno/Documents/PSUMAA/Solucao.h
 Job.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h
+/Users/bruno/Documents/PSUMAA/Job.h
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 vector
 -
 list
@@ -108,17 +108,17 @@ list
 deque
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp
+/Users/bruno/Documents/PSUMAA/Tarefa.cpp
 Tarefa.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+/Users/bruno/Documents/PSUMAA/Tarefa.h
 iostream
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h
+/Users/bruno/Documents/PSUMAA/Tarefa.h
 iostream
 -
 
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp
+/Users/bruno/Documents/PSUMAA/main.cpp
 iostream
 -
 random
@@ -132,11 +132,11 @@ cstdlib
 cstring
 -
 Problema.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h
+/Users/bruno/Documents/PSUMAA/Problema.h
 Solucao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h
+/Users/bruno/Documents/PSUMAA/Solucao.h
 Populacao.h
-/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h
+/Users/bruno/Documents/PSUMAA/Populacao.h
 omp.h
 -
 

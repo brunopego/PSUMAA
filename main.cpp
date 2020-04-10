@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
     char pName[256], pValue[256];
     int paralelo=1;
     string nomeArquivo = "";
-    int mi = 1, lambda = 1, tipo = 1, qtdEvolucao = 0, tipoEstrategia = 0, pctgVnd = 0, pctgMut = 0;
+    int mi = 1, lambda = 1, tipo = 1, qtdEvolucao = 0, tipoEstrategia = 0, pctgVnd = 0, pctgMut = 0, pctgItia = 100;
 
     for(int i = 1; i < argc; i++)
     {
@@ -99,11 +99,12 @@ int main(int argc, char **argv) {
             continue;
         }
 
+        /*
         if (strcmp( pName, "qtdEvolucao" )==0)
         {
             qtdEvolucao = atoi(pValue);
             continue;
-        }
+        }*/
 
         if (strcmp( pName, "tipoEstrategia" )==0)
         {
@@ -111,11 +112,18 @@ int main(int argc, char **argv) {
             continue;
         }
 
+        if (strcmp( pName, "pctgItia" )==0)
+        {
+            pctgItia = atoi(pValue);
+            continue;
+        }
+
+        /*
         if (strcmp( pName, "pctgVnd" )==0)
         {
             pctgVnd = atoi(pValue);
             continue;
-        }
+        }*/
 
         /*
         if (strcmp( pName, "pctgMut" )==0)
@@ -146,9 +154,10 @@ int main(int argc, char **argv) {
     //Problema p("instancias/dados/INST2501.dat");
     //Problema p("instancias/dados/INST3001.dat");
 
-    //string caminho = nomeArquivo; comentado aqui
+    string caminho = nomeArquivo;
     //Problema p(caminho);
-    //Problema p("instancias/gomesjunior/" + caminho); comentado aqui
+    //Problema p("instancias/gomesjunior/" + caminho);
+    Problema p("instancias/amostra/" + caminho);
 
     //Problema p("instancias/dados/INST5001.dat");
     //Problema p("instancias/dados/INST7501.dat");
@@ -160,38 +169,40 @@ int main(int argc, char **argv) {
 
     //paralelo = 0;
     //Problema p("instancias/dados/INST1001.dat");
-    //Problema p("instancias/gomesjunior/INST2503.dat");
-    //Populacao pop(200, 10, 1, &p, 600, 1, 20,20, start);
+    //Problema p("instancias/gomesjunior/INST0803.dat");
+    //Problema p("instancias/brunorosa/INSTDT0813.dat");
+    //Problema p("instancias/novas/NI00813.dat");
+    //Populacao pop(200, 20, 1, &p, 1000, 1, 20,20, start);
     //Populacao pop(200, 1000, 1, &p, 600, 1, 40, 2);
-    //lambda *= mi; comentado aqui
-    //Populacao pop(mi, lambda, 1, &p, qtdEvolucao, tipoEstrategia, pctgVnd, pctgVnd, start); comentado aqui
-    //if(paralelo){
-    //    pop.estrategiaEvolutivaParalela();
-    //} else{
-        //pop.estrategiaEvolutiva();
-    //}
+    //lambda *= mi;
+    lambda = lambda/mi;
+    Populacao pop(mi, lambda, 1, &p, tipoEstrategia, pctgItia, start);
+    //Populacao pop(mi, lambda, 1, &p, 1, 10, start);
+    pop.estrategiaEvolutiva();
+    double segundos = omp_get_wtime() - start;
 
     //cout << endl;
 
     //pop.getPopulacao().front().imprimeSolucao2();
     //cout << endl;
 
-    //pop.getPopulacao().front().itia(); comentado aqui
-    //pop.getPopulacao().front().imprimeSolucao();
+    //pop.getPopulacao().front().itia();
+    //pop.getPopulacao().front().imprimeSolucao2();
     //cout << endl;
 
-    Problema p("instancias/brunorosa/INSTDT0813.dat");
-    //Problema p("instancias/dados/INST0004.dat");
-    Solucao solu(&p);
-    solu.ordena(0, 1);
-    //solu.atualizaLista(); // necessario para o arquivo 0004 pois nao usa o ordena
-    solu.gerarLinhaDoTempo();
+
+    //Problema p("instancias/brunorosa/INSTDT0813.dat");
+    //Problema p("instancias/dados/INST0004.dat"); --deixar comentado
+    //Solucao solu(&p);
+    //solu.ordena(0, 1);
+    //solu.atualizaLista(); // necessario para o arquivo 0004 pois nao usa o ordena --deixar comentado
+    //solu.gerarLinhaDoTempo();
     // a funcao imprimeSolucao está errada
-    solu.imprimeSolucao2();
-    //cout << "Custo: " << solu.getCusto();
+    //solu.imprimeSolucao2();
+    //cout << "Custo: " << solu.getCusto(); --deixar comentado
 
 
-    cout << endl;
+    /*cout << endl;
     cout << "Após ITIA";
     cout << endl;
 
@@ -199,24 +210,31 @@ int main(int argc, char **argv) {
     solu.imprimeSolucao2();
     //cout << "Custo: " << solu.getCusto();
     cout << endl;
-    cout << endl;
+    cout << endl;*/
 
 
 
     //comentado aqui
     //cout << nomeArquivo << ";" << mi << ";" << lambda/mi << ";" << qtdEvolucao << ";" << tipoEstrategia << ";" << pctgVnd << ";";
 
+    //novo
+    //cout << nomeArquivo << ";" << mi << ";" << lambda << ";" << qtdEvolucao << ";" << tipoEstrategia << ";" << pctgVnd << ";";
+    cout << nomeArquivo << ";" << mi << ";" << lambda * mi << ";" << tipoEstrategia << ";" << pctgItia << ";";
+
+    //imprime em qual evolucao parou
+    cout << pop.getPopulacao().front().getNumeroEvolucao();
+    cout << ";";
 
     // imprime o custo
-    //cout << pop.getPopulacao().front().getCusto(); comentado aqui
-    //cout << ";"; comentado aqui
+    cout << pop.getPopulacao().front().getCusto();
+    cout << ";";
 
 
     //cout << endl;
     //high_resolution_clock::time_point t2 = high_resolution_clock::now();
     //auto duracao = duration_cast<milliseconds>( t2 - t1 ).count();
     //float segundos = float (duracao)/1000;
-    double segundos = omp_get_wtime() - start;
+    //double segundos = omp_get_wtime() - start;
     cout << segundos << endl;
 
     return 0;

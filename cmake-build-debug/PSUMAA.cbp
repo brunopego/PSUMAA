@@ -8,116 +8,112 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug"/>
+				<Option working_dir="/Users/bruno/Documents/PSUMAA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug"/>
+				<Option working_dir="/Users/bruno/Documents/PSUMAA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug"/>
+				<Option working_dir="/Users/bruno/Documents/PSUMAA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PSUMAA">
-				<Option output="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/PSUMAA" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug"/>
+				<Option output="/Users/bruno/Documents/PSUMAA/cmake-build-debug/PSUMAA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bruno/Documents/PSUMAA/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 PSUMAA"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 PSUMAA"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PSUMAA/fast">
-				<Option output="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/PSUMAA" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug"/>
+				<Option output="/Users/bruno/Documents/PSUMAA/cmake-build-debug/PSUMAA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bruno/Documents/PSUMAA/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 PSUMAA/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bruno/Dropbox/TCC/Implementação/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 PSUMAA/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bruno/Documents/PSUMAA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Job.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Job.h">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Job.h">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Populacao.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Populacao.h">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Populacao.h">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Problema.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Problema.h">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Problema.h">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Solucao.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Solucao.h">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Solucao.h">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Tarefa.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/Tarefa.h">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/Tarefa.h">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/main.cpp">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/main.cpp">
 			<Option target="PSUMAA"/>
 		</Unit>
-		<Unit filename="/home/bruno/Dropbox/TCC/Implementação/PSUMAA/CMakeLists.txt">
+		<Unit filename="/Users/bruno/Documents/PSUMAA/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

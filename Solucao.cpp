@@ -235,7 +235,7 @@ bool Solucao::operator==(const Solucao &sol) const {
     return true;
 }
 
-void Solucao::gerarLinhaDoTempo() {
+void Solucao::gerarLinhaDoTempo(int pctgItia) {
 
     /* Esta funcao mantem a lista e o vetor de jobs atualizados,
      * gerando a linha de tempo de execucao das tarefas
@@ -260,6 +260,11 @@ void Solucao::gerarLinhaDoTempo() {
 
     calculaCusto();
 
+    int numProbalidade = geraPosicaoAleatoria(100)+1;
+    if(pctgItia >= numProbalidade) {
+        itia();
+    }
+
 }
 
 void Solucao::atualizaVetor() {
@@ -283,6 +288,14 @@ void Solucao::atualizaLista() {
 
 int Solucao::getCusto() const {
     return this->custo;
+}
+
+int Solucao::getNumeroEvolucao() const {
+    return this->numeroEvolucao;
+}
+
+void Solucao::setNumeroEvolucao(int numeroEvolucao) {
+    Solucao::numeroEvolucao = numeroEvolucao;
 }
 
 void Solucao::fazerMutacao(int tipo) {
@@ -563,6 +576,7 @@ void Solucao::itia() {
 
                 // linha 12 pseudo -> if last(xi) != xn then
                 if(blocos.front().back()->getId() != sol[sol.size() - 1].getId()){
+
                     //int setup = prob->getTempoSetup(sol[i].getId(), sol[i+1].getId());
                     int setup = prob->getTempoSetup(blocos.front().back()->getId(), blocos[1].front()->getId());
                     //fi = min(sol[i+1].getFim() - sol[i+1].t->getTp() - setup, min(M1(copiaBloco(blocos.front())), M2(copiaBloco(blocos.front()))));

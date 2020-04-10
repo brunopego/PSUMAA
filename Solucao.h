@@ -18,6 +18,7 @@ private:
     Problema *prob; // referencia para o problema
     int custo = 0; // custo da solucao, calculado apos a linha do tempo ser gerada
     //int qtd_tarefas; // quantidade de jobs/tarefas
+    int numeroEvolucao; // identifica em qual numero da evolucao a solucao foi gerada, utilizado para o resultado final
 
 public:
     Solucao(Problema* prob);
@@ -40,13 +41,17 @@ public:
 
     bool operator==(const Solucao&  sol) const;
 
-    void gerarLinhaDoTempo();
+    void gerarLinhaDoTempo(int pctgItia);
 
     void atualizaVetor();
 
     void atualizaLista();
 
     int getCusto() const;
+
+    int getNumeroEvolucao() const;
+
+    void setNumeroEvolucao(int numeroEvolucao);
 
     void fazerMutacao(int tipo);
 
