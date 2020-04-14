@@ -1,2 +1,5 @@
 .idea/
 cmake-build-debug/CMakeFiles/
+cmake-build-debug/8to50run.sh
+cmake-build-debug/roda.sh
+cmake-build-debug/run.sh
